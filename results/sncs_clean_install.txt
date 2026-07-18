@@ -1,0 +1,16 @@
+VHSS 1.2.0
+{
+  "task": "3*x^2+2*x+1",
+  "hash_evolution": {
+    "program": "(((x - -1) + x) + ((3 * x) * x))",
+    "train_mae": 0.0,
+    "validation_mae": 0.0,
+    "test_mae": 0.0,
+    "proposals": 6720,
+    "unique_evaluations": 5023,
+    "cache_hits": 1703,
+    "hash_attempts": 6720,
+    "elapsed_seconds": 0.8394610699997429,
+    "stopped_reason": "exact_train_and_validation"
+  }
+}

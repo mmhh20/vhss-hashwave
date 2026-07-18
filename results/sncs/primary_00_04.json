@@ -1,0 +1,4586 @@
+{
+  "configuration": {
+    "tasks": 30,
+    "seeds": 5,
+    "seed_start": 0,
+    "workers": 8,
+    "requested_evaluations": 3000,
+    "methods": [
+      "vhss_hash",
+      "vhss_prng"
+    ]
+  },
+  "summary": {
+    "methods": {
+      "vhss_hash": {
+        "runs": 150,
+        "test_exact": 146,
+        "test_exact_rate": 0.9733333333333334,
+        "median_test_mae": 0.0,
+        "median_proposals": 1344.0,
+        "median_elapsed_seconds": 0.38143905850029114,
+        "median_size": 9.0
+      },
+      "vhss_prng": {
+        "runs": 150,
+        "test_exact": 142,
+        "test_exact_rate": 0.9466666666666667,
+        "median_test_mae": 0.0,
+        "median_proposals": 1344.0,
+        "median_elapsed_seconds": 0.31381627849987126,
+        "median_size": 11.0
+      }
+    },
+    "families": {
+      "abs": {
+        "vhss_hash": 1.0,
+        "vhss_prng": 1.0
+      },
+      "bit": {
+        "vhss_hash": 1.0,
+        "vhss_prng": 1.0
+      },
+      "clamp": {
+        "vhss_hash": 1.0,
+        "vhss_prng": 1.0
+      },
+      "cubic": {
+        "vhss_hash": 1.0,
+        "vhss_prng": 1.0
+      },
+      "lin": {
+        "vhss_hash": 1.0,
+        "vhss_prng": 1.0
+      },
+      "max": {
+        "vhss_hash": 1.0,
+        "vhss_prng": 0.9
+      },
+      "maxmin": {
+        "vhss_hash": 1.0,
+        "vhss_prng": 1.0
+      },
+      "quad": {
+        "vhss_hash": 1.0,
+        "vhss_prng": 1.0
+      },
+      "quartic": {
+        "vhss_hash": 0.7333333333333333,
+        "vhss_prng": 0.5333333333333333
+      }
+    },
+    "pairwise_vs_vhss_hash": {
+      "vhss_prng": {
+        "paired_runs": 150,
+        "vhss_wins": 61,
+        "ties": 14,
+        "vhss_losses": 75,
+        "wilcoxon_p_raw": 0.2036580168086497,
+        "holm_adjusted_p": 0.2036580168086497
+      }
+    }
+  },
+  "elapsed_seconds": 29.488504540000577,
+  "runs": [
+    {
+      "task": "abs_2x_m3_p1",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(abs(((-3 + x) + x)) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2548,
+          "unique_evaluations": 2008,
+          "cache_hits": 547,
+          "elapsed_seconds": 0.6101476889998594,
+          "size": 8,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((abs((((x + x) + (-3 - x)) + x)) + 2) + -1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2548,
+          "unique_evaluations": 1987,
+          "cache_hits": 568,
+          "elapsed_seconds": 0.5137569580001582,
+          "size": 14,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "abs_2x_m3_p1",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "(abs(((-3 + x) + x)) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 588,
+          "unique_evaluations": 418,
+          "cache_hits": 177,
+          "elapsed_seconds": 0.1130947700003162,
+          "size": 8,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(abs(((-3 + x) + x)) - -1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 980,
+          "unique_evaluations": 731,
+          "cache_hits": 256,
+          "elapsed_seconds": 0.29873379899981956,
+          "size": 8,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "abs_2x_m3_p1",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "(abs((((x - 4) + x) + 1)) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2156,
+          "unique_evaluations": 1729,
+          "cache_hits": 434,
+          "elapsed_seconds": 0.42074203999982274,
+          "size": 10,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(abs(((-3 + x) + x)) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 5292,
+          "unique_evaluations": 4205,
+          "cache_hits": 1094,
+          "elapsed_seconds": 1.3579361049996805,
+          "size": 8,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "abs_2x_m3_p1",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "abs((2 + (-3 - abs((((3 + (x - 3)) - 3) + x)))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3724,
+          "unique_evaluations": 3015,
+          "cache_hits": 716,
+          "elapsed_seconds": 1.0035801560006803,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(abs(((x - 1) + (x - 2))) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3724,
+          "unique_evaluations": 2867,
+          "cache_hits": 864,
+          "elapsed_seconds": 1.1724145380012487,
+          "size": 10,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "abs_2x_m3_p1",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "(abs((-4 - ((x + x) + -7))) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1764,
+          "unique_evaluations": 1385,
+          "cache_hits": 386,
+          "elapsed_seconds": 0.3959735690004891,
+          "size": 10,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(abs((((-2 + x) + -1) + x)) - (x - (3 + (x - 2))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2548,
+          "unique_evaluations": 2069,
+          "cache_hits": 486,
+          "elapsed_seconds": 0.7097855089996301,
+          "size": 16,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "abs_double",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(abs((-(((abs((2 - x)) - -2) + x) - (2 - x)))) + (2 - x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3724,
+          "unique_evaluations": 2866,
+          "cache_hits": 865,
+          "elapsed_seconds": 1.1929687510000804,
+          "size": 18,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((abs((-2 - (1 - abs((2 * x))))) + 1) + 2)",
+          "train_mae": 0.13333333333333333,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 9212,
+          "unique_evaluations": 6396,
+          "cache_hits": 2823,
+          "elapsed_seconds": 2.40752029900068,
+          "size": 13,
+          "stopped_reason": "generation_limit"
+        }
+      }
+    },
+    {
+      "task": "abs_double",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "(abs((3 - abs((x + x)))) + 3)",
+          "train_mae": 0.13333333333333333,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 9212,
+          "unique_evaluations": 6849,
+          "cache_hits": 2370,
+          "elapsed_seconds": 2.62369714200031,
+          "size": 9,
+          "stopped_reason": "generation_limit"
+        },
+        "vhss_prng": {
+          "program": "(abs((-1 - abs((abs((abs((2 * x)) + -1)) + -2)))) + 2)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 7644,
+          "unique_evaluations": 5633,
+          "cache_hits": 2018,
+          "elapsed_seconds": 2.216433516001416,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "abs_double",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "((abs(((abs((abs((x + x)) - 2)) - -1) - 2)) + -1) + 4)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 6468,
+          "unique_evaluations": 4797,
+          "cache_hits": 1678,
+          "elapsed_seconds": 1.7707824569988588,
+          "size": 16,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(abs(x) + (abs((abs(x) + -2)) - ((-2 - x) + x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2940,
+          "unique_evaluations": 2339,
+          "cache_hits": 608,
+          "elapsed_seconds": 0.714745822999248,
+          "size": 14,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "abs_double",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "(abs((-1 - (abs((x + x)) + -4))) - -3)",
+          "train_mae": 0.13333333333333333,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 9212,
+          "unique_evaluations": 6901,
+          "cache_hits": 2318,
+          "elapsed_seconds": 2.212708973998815,
+          "size": 11,
+          "stopped_reason": "generation_limit"
+        },
+        "vhss_prng": {
+          "program": "((abs((abs((abs((x + x)) + -1)) + -2)) + 2) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 4900,
+          "unique_evaluations": 3819,
+          "cache_hits": 1088,
+          "elapsed_seconds": 1.4643856130005588,
+          "size": 14,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "abs_double",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "(abs((abs((abs((x + x)) + 1)) - 4)) + 3)",
+          "train_mae": 0.13333333333333333,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 9212,
+          "unique_evaluations": 6714,
+          "cache_hits": 2505,
+          "elapsed_seconds": 2.9383011940008146,
+          "size": 12,
+          "stopped_reason": "generation_limit"
+        },
+        "vhss_prng": {
+          "program": "abs((abs((abs((x + x)) - 3)) + 3))",
+          "train_mae": 0.13333333333333333,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 9212,
+          "unique_evaluations": 6743,
+          "cache_hits": 2476,
+          "elapsed_seconds": 2.8736789929989754,
+          "size": 10,
+          "stopped_reason": "generation_limit"
+        }
+      }
+    },
+    {
+      "task": "abs_x",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "abs(x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 196,
+          "unique_evaluations": 139,
+          "cache_hits": 64,
+          "elapsed_seconds": 0.01422702000127174,
+          "size": 2,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "abs(x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 196,
+          "unique_evaluations": 134,
+          "cache_hits": 69,
+          "elapsed_seconds": 0.012939659000039683,
+          "size": 2,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "abs_x",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "abs(x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 196,
+          "unique_evaluations": 143,
+          "cache_hits": 60,
+          "elapsed_seconds": 0.07095407599990722,
+          "size": 2,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "abs(x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 196,
+          "unique_evaluations": 141,
+          "cache_hits": 62,
+          "elapsed_seconds": 0.013967919001515838,
+          "size": 2,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "abs_x",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "abs(x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 196,
+          "unique_evaluations": 149,
+          "cache_hits": 54,
+          "elapsed_seconds": 0.01448095300111163,
+          "size": 2,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "abs(x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 196,
+          "unique_evaluations": 144,
+          "cache_hits": 59,
+          "elapsed_seconds": 0.013768007998805842,
+          "size": 2,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "abs_x",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "abs(x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 196,
+          "unique_evaluations": 156,
+          "cache_hits": 47,
+          "elapsed_seconds": 0.06727094300003955,
+          "size": 2,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "abs(x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 196,
+          "unique_evaluations": 139,
+          "cache_hits": 64,
+          "elapsed_seconds": 0.01290170199899876,
+          "size": 2,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "abs_x",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "abs(x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 196,
+          "unique_evaluations": 144,
+          "cache_hits": 59,
+          "elapsed_seconds": 0.014758991999769933,
+          "size": 2,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "abs(x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 196,
+          "unique_evaluations": 134,
+          "cache_hits": 69,
+          "elapsed_seconds": 0.060588887999983854,
+          "size": 2,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_and_or",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((3 & x) | 1) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 924,
+          "unique_evaluations": 714,
+          "cache_hits": 215,
+          "elapsed_seconds": 0.2713235639985214,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((((x + x) & 5) + (x & (2 ^ x))) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1708,
+          "unique_evaluations": 1241,
+          "cache_hits": 472,
+          "elapsed_seconds": 0.4022700169989548,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_and_or",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "((3 & ((-7 & (5 - x)) ^ x)) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1708,
+          "unique_evaluations": 1331,
+          "cache_hits": 382,
+          "elapsed_seconds": 0.5588218560005771,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((((-2 & x) & 7) & 3) + x) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 1018,
+          "cache_hits": 303,
+          "elapsed_seconds": 0.3126583860012033,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_and_or",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "((3 & (-7 | x)) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 532,
+          "unique_evaluations": 389,
+          "cache_hits": 148,
+          "elapsed_seconds": 0.10493306199896324,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((((-2 & x) + (3 & x)) + 1) | (((((8 + x) & 2) & x) & (4 & x)) & -6))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 4060,
+          "unique_evaluations": 3027,
+          "cache_hits": 1038,
+          "elapsed_seconds": 1.1178382839989354,
+          "size": 23,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_and_or",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((((10 & (x - 3)) - x) + (1 ^ x)) & 3) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 1033,
+          "cache_hits": 288,
+          "elapsed_seconds": 0.4946636019994912,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((3 & x) | 1) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 140,
+          "unique_evaluations": 99,
+          "cache_hits": 46,
+          "elapsed_seconds": 0.00922268499925849,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_and_or",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "((1 + x) + (2 & x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 532,
+          "unique_evaluations": 394,
+          "cache_hits": 143,
+          "elapsed_seconds": 0.10585579299913661,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((3 & (1 | x)) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 924,
+          "unique_evaluations": 694,
+          "cache_hits": 235,
+          "elapsed_seconds": 0.19757276800010004,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_mask",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "((((-6 & x) & 4) & x) + ((((-6 & x) & x) | 3) ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 1015,
+          "cache_hits": 306,
+          "elapsed_seconds": 0.327515085999039,
+          "size": 17,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((7 & x) ^ 3)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2100,
+          "unique_evaluations": 1610,
+          "cache_hits": 495,
+          "elapsed_seconds": 0.3820644919996994,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_mask",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "((7 & x) ^ 3)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2100,
+          "unique_evaluations": 1600,
+          "cache_hits": 505,
+          "elapsed_seconds": 0.5479981869993935,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((0 & x) ^ (((2 & x) ^ 7) & (3 ^ x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 924,
+          "unique_evaluations": 637,
+          "cache_hits": 292,
+          "elapsed_seconds": 0.10449746400081494,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_mask",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "((3 | x) & (5 ^ (-2 ^ x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 924,
+          "unique_evaluations": 615,
+          "cache_hits": 314,
+          "elapsed_seconds": 0.14268930800062662,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((7 & x) ^ 3)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 924,
+          "unique_evaluations": 668,
+          "cache_hits": 261,
+          "elapsed_seconds": 0.18616765199840302,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_mask",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "(7 & (-5 ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 532,
+          "unique_evaluations": 365,
+          "cache_hits": 172,
+          "elapsed_seconds": 0.10008500200092385,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((7 & ((-1 + ((-4 | x) ^ x)) | (-6 ^ x))) & (4 | (-1 - x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 4452,
+          "unique_evaluations": 3472,
+          "cache_hits": 985,
+          "elapsed_seconds": 0.805148535000626,
+          "size": 19,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_mask",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "((3 ^ x) & (4 ^ (-1 ^ x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1708,
+          "unique_evaluations": 1288,
+          "cache_hits": 425,
+          "elapsed_seconds": 0.36322671999914746,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(7 & (3 ^ ((9 & (x - -6)) | x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 987,
+          "cache_hits": 334,
+          "elapsed_seconds": 0.15131281899994065,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_mix5",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "((2 | x) ^ (7 - (3 & x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 1028,
+          "cache_hits": 293,
+          "elapsed_seconds": 0.3322098039989214,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(-1 & ((4 ^ x) | (5 ^ x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 532,
+          "unique_evaluations": 383,
+          "cache_hits": 154,
+          "elapsed_seconds": 0.10489678700105287,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_mix5",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "((-2 & x) ^ 5)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 924,
+          "unique_evaluations": 705,
+          "cache_hits": 224,
+          "elapsed_seconds": 0.19833079000090947,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((-2 & x) & x) ^ 5)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1708,
+          "unique_evaluations": 1330,
+          "cache_hits": 383,
+          "elapsed_seconds": 0.42526884299877565,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_mix5",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "((1 & x) + (5 ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 1023,
+          "cache_hits": 298,
+          "elapsed_seconds": 0.32643207299952337,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(1 | (4 ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 1017,
+          "cache_hits": 304,
+          "elapsed_seconds": 0.359010122001564,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_mix5",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "((5 & ((-1 + x) | (11 + x))) ^ x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 979,
+          "cache_hits": 342,
+          "elapsed_seconds": 0.30015878999984125,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(5 ^ ((1 & x) ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 924,
+          "unique_evaluations": 697,
+          "cache_hits": 232,
+          "elapsed_seconds": 0.21368739399986225,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_mix5",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "((4 & x) ^ (5 | x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 1057,
+          "cache_hits": 264,
+          "elapsed_seconds": 0.40004820700050914,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((-1 - (2 & x)) ^ ((-4 & x) ^ -6))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 1014,
+          "cache_hits": 307,
+          "elapsed_seconds": 0.3022199079987331,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_or_and",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "((3 & (x - 2)) ^ x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 924,
+          "unique_evaluations": 665,
+          "cache_hits": 264,
+          "elapsed_seconds": 0.20066104299985454,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(1 ^ (((6 | (x - -1)) & (-5 - x)) | x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1708,
+          "unique_evaluations": 1206,
+          "cache_hits": 507,
+          "elapsed_seconds": 0.400901248000082,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_or_and",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "((-4 & x) + 2)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 924,
+          "unique_evaluations": 706,
+          "cache_hits": 223,
+          "elapsed_seconds": 0.20896625599925756,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(2 | ((3 & x) ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 973,
+          "cache_hits": 348,
+          "elapsed_seconds": 0.29220157300005667,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_or_and",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "((-4 & x) + 2)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 532,
+          "unique_evaluations": 396,
+          "cache_hits": 141,
+          "elapsed_seconds": 0.16255917600028624,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(1 ^ (3 | x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 140,
+          "unique_evaluations": 99,
+          "cache_hits": 46,
+          "elapsed_seconds": 0.0084802760011371,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_or_and",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((-3 & x) & -2) ^ 2)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 956,
+          "cache_hits": 365,
+          "elapsed_seconds": 0.3698913389998779,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((1 & (4 | x)) ^ (2 | x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 995,
+          "cache_hits": 326,
+          "elapsed_seconds": 0.23621589100002893,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_or_and",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "(-2 & (2 | x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 969,
+          "cache_hits": 352,
+          "elapsed_seconds": 0.36846839300051215,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(1 ^ (3 | x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 924,
+          "unique_evaluations": 683,
+          "cache_hits": 246,
+          "elapsed_seconds": 0.13968374599971867,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_xor3",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(1 ^ (2 ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1708,
+          "unique_evaluations": 1230,
+          "cache_hits": 483,
+          "elapsed_seconds": 0.3996042580001813,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(2 ^ (1 ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 981,
+          "cache_hits": 340,
+          "elapsed_seconds": 0.3138683939996554,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_xor3",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "(3 ^ x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 532,
+          "unique_evaluations": 415,
+          "cache_hits": 122,
+          "elapsed_seconds": 0.17044275799889874,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(3 ^ x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 140,
+          "unique_evaluations": 99,
+          "cache_hits": 46,
+          "elapsed_seconds": 0.01011151499915286,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_xor3",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "(-1 & (3 ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 532,
+          "unique_evaluations": 400,
+          "cache_hits": 137,
+          "elapsed_seconds": 0.10984743900007743,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(-1 - (-4 ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 532,
+          "unique_evaluations": 391,
+          "cache_hits": 146,
+          "elapsed_seconds": 0.10025878200031002,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_xor3",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "(x ^ (x ^ (3 ^ x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1708,
+          "unique_evaluations": 1319,
+          "cache_hits": 394,
+          "elapsed_seconds": 0.5059271699992678,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(-1 - (-4 ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 532,
+          "unique_evaluations": 393,
+          "cache_hits": 144,
+          "elapsed_seconds": 0.10789847700107202,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_xor3",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "(0 | (3 ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 532,
+          "unique_evaluations": 402,
+          "cache_hits": 135,
+          "elapsed_seconds": 0.10861367899997276,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(-1 - (-4 ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 532,
+          "unique_evaluations": 409,
+          "cache_hits": 128,
+          "elapsed_seconds": 0.1086526099988987,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "clamp_3",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "min(3, max(-3, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2100,
+          "unique_evaluations": 1629,
+          "cache_hits": 476,
+          "elapsed_seconds": 0.8067069579992676,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "max(-8, min(3, max(-3, x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 924,
+          "unique_evaluations": 718,
+          "cache_hits": 211,
+          "elapsed_seconds": 0.20728005299861252,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "clamp_3",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "max(-3, min(3, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 1015,
+          "cache_hits": 306,
+          "elapsed_seconds": 0.3057512279992807,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "min(3, max(-3, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 532,
+          "unique_evaluations": 352,
+          "cache_hits": 185,
+          "elapsed_seconds": 0.08850119199996698,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "clamp_3",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "max(-3, min(3, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 924,
+          "unique_evaluations": 734,
+          "cache_hits": 195,
+          "elapsed_seconds": 0.21376083500035747,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "max(max(-3, min(3, max(-4, x))), min(-3, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2100,
+          "unique_evaluations": 1599,
+          "cache_hits": 506,
+          "elapsed_seconds": 0.5992214880006941,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "clamp_3",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "max(-3, min(3, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1708,
+          "unique_evaluations": 1343,
+          "cache_hits": 370,
+          "elapsed_seconds": 0.4899227799996879,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "min(3, max(-5, max(max(-3, x), x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2100,
+          "unique_evaluations": 1667,
+          "cache_hits": 438,
+          "elapsed_seconds": 0.6949212179988535,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "clamp_3",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "min(3, max(-3, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 993,
+          "cache_hits": 328,
+          "elapsed_seconds": 0.378043130000151,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "min(3, max(-3, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2100,
+          "unique_evaluations": 1590,
+          "cache_hits": 515,
+          "elapsed_seconds": 0.6073251559992059,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_2x3_mx2_1",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((1 + (3 * x)) + ((((2 * x) * x) - (x - -4)) * x)) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2520,
+          "unique_evaluations": 2129,
+          "cache_hits": 397,
+          "elapsed_seconds": 0.9761633960006293,
+          "size": 19,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((((x + x) * x) - x) * x) - -1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3304,
+          "unique_evaluations": 2784,
+          "cache_hits": 526,
+          "elapsed_seconds": 1.0984659389996523,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_2x3_mx2_1",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "((4 + ((((((1 + x) + 3) + x) + -5) * x) * x)) - 3)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2520,
+          "unique_evaluations": 2116,
+          "cache_hits": 410,
+          "elapsed_seconds": 1.1894850520002365,
+          "size": 17,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(1 + ((((2 * x) * x) + (-x)) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1128,
+          "cache_hits": 222,
+          "elapsed_seconds": 0.3951753479996114,
+          "size": 12,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_2x3_mx2_1",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((-5 + ((((x + x) * x) + (-1 - x)) * x)) + 6) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 4088,
+          "unique_evaluations": 3397,
+          "cache_hits": 697,
+          "elapsed_seconds": 1.8697850810003729,
+          "size": 17,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((-1 + x) + (((x * x) * (x - (1 - x))) - (-2 + x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3304,
+          "unique_evaluations": 2796,
+          "cache_hits": 514,
+          "elapsed_seconds": 1.2302151809999486,
+          "size": 17,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_2x3_mx2_1",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "((((-7 + x) - (x - -1)) + (9 - (x * x))) + (((x + x) * x) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2912,
+          "unique_evaluations": 2421,
+          "cache_hits": 497,
+          "elapsed_seconds": 0.9792594950013154,
+          "size": 21,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(1 + ((((-1 + x) + x) * x) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1808,
+          "cache_hits": 326,
+          "elapsed_seconds": 0.6471502429994871,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_2x3_mx2_1",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "(1 + ((((2 * x) - 1) * x) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2520,
+          "unique_evaluations": 2104,
+          "cache_hits": 422,
+          "elapsed_seconds": 0.8182454839989077,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((((-8 + ((((x - 1) - (0 - x)) * x) * x)) + x) + (5 + (4 - x))) + (-8 + ((8 + x) - x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3304,
+          "unique_evaluations": 2731,
+          "cache_hits": 579,
+          "elapsed_seconds": 1.5876018059989292,
+          "size": 29,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_mx3_2x",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "((x + x) + ((x * x) * (-x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1758,
+          "cache_hits": 376,
+          "elapsed_seconds": 0.6089439990009851,
+          "size": 10,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((((2 - (x - 3)) + x) - (x * x)) - 3) * x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1736,
+          "unique_evaluations": 1427,
+          "cache_hits": 315,
+          "elapsed_seconds": 0.40149896100047044,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_mx3_2x",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((6 - (x * x)) - 4) * x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1736,
+          "unique_evaluations": 1448,
+          "cache_hits": 294,
+          "elapsed_seconds": 0.41382758899999317,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((8 + (((0 - x) * x) - 6)) * x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1085,
+          "cache_hits": 265,
+          "elapsed_seconds": 0.38597714900060964,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_mx3_2x",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "((2 - (x * x)) * x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1736,
+          "unique_evaluations": 1420,
+          "cache_hits": 322,
+          "elapsed_seconds": 0.6078924310004368,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((x - (((-2 + x) * (4 + x)) - (-6 - (-x)))) * x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1745,
+          "cache_hits": 389,
+          "elapsed_seconds": 0.6807397779994062,
+          "size": 16,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_mx3_2x",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((x - -2) - (6 + ((x * x) - (6 - x)))) * x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1736,
+          "unique_evaluations": 1477,
+          "cache_hits": 265,
+          "elapsed_seconds": 0.4325359649992606,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((0 - x) * ((x * x) - ((6 - (x - -4)) + x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1078,
+          "cache_hits": 272,
+          "elapsed_seconds": 0.37242609600070864,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_mx3_2x",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "((-1 * x) * (((x * x) - -3) - 5))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1112,
+          "cache_hits": 238,
+          "elapsed_seconds": 0.33770028199978697,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((2 - (x * x)) * x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 168,
+          "unique_evaluations": 119,
+          "cache_hits": 55,
+          "elapsed_seconds": 0.010952443000860512,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_x3_m2x_4",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "((-2 - (-5 + (x - 1))) + (((x * x) * x) - x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2520,
+          "unique_evaluations": 2110,
+          "cache_hits": 416,
+          "elapsed_seconds": 0.7726826170001004,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((((-1 + (((-2 + x) * (3 + x)) - (-8 + x))) + -4) * x) + (x - -4))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 4480,
+          "unique_evaluations": 3666,
+          "cache_hits": 820,
+          "elapsed_seconds": 1.0414430589989934,
+          "size": 21,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_x3_m2x_4",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "((((x * x) * x) - x) - ((((0 - x) + x) + -4) + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2520,
+          "unique_evaluations": 2113,
+          "cache_hits": 413,
+          "elapsed_seconds": 0.6917346400005044,
+          "size": 17,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((-1 + ((x * x) * x)) + ((-x) + (5 - x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1746,
+          "cache_hits": 388,
+          "elapsed_seconds": 0.6183128230004513,
+          "size": 14,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_x3_m2x_4",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((-3 + (x * x)) * x) - (-6 - (x - 2)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1736,
+          "unique_evaluations": 1419,
+          "cache_hits": 323,
+          "elapsed_seconds": 0.6758651039999677,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((x * x) * x) + ((-x) - (-4 + x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1752,
+          "cache_hits": 382,
+          "elapsed_seconds": 0.7351596389999031,
+          "size": 12,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_x3_m2x_4",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "(-1 + ((((x * x) * x) - (-5 + x)) - x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1778,
+          "cache_hits": 356,
+          "elapsed_seconds": 0.5938777370010939,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((x * x) * x) - ((x - (-1 * x)) - 4))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1098,
+          "cache_hits": 252,
+          "elapsed_seconds": 0.3030541859989171,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_x3_m2x_4",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((-2 * x) + ((x * x) * x)) - -4)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2912,
+          "unique_evaluations": 2445,
+          "cache_hits": 473,
+          "elapsed_seconds": 0.9848336070008372,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((x * x) * x) + (((1 + x) - (2 + x)) - (x - ((-5 + x) * -1))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1724,
+          "cache_hits": 410,
+          "elapsed_seconds": 0.5921338130010554,
+          "size": 21,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_x3_m3x2_2",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(2 + (((1 + (x - 4)) * x) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3696,
+          "unique_evaluations": 3049,
+          "cache_hits": 653,
+          "elapsed_seconds": 1.2346559779998643,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((6 + x) + ((((-2 + x) * x) * x) + ((-4 - x) - (x * x))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2520,
+          "unique_evaluations": 2131,
+          "cache_hits": 395,
+          "elapsed_seconds": 0.8814999980004359,
+          "size": 19,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_x3_m3x2_2",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "((((x - 2) * x) * x) + (2 - (x * x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2912,
+          "unique_evaluations": 2476,
+          "cache_hits": 442,
+          "elapsed_seconds": 0.9268475429998944,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(2 + (((((1 + x) - 2) * x) - (x + x)) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1800,
+          "cache_hits": 334,
+          "elapsed_seconds": 0.7222047329996713,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_x3_m3x2_2",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((((-3 + x) * x) * x) + (4 - (-1 * x))) + (-2 - x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 4088,
+          "unique_evaluations": 3453,
+          "cache_hits": 641,
+          "elapsed_seconds": 1.3810288259992376,
+          "size": 17,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((((x * x) - (x + x)) * x) - (-2 + (x * x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2912,
+          "unique_evaluations": 2437,
+          "cache_hits": 481,
+          "elapsed_seconds": 1.0888158100005967,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_x3_m3x2_2",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "(2 + (((((2 - (-4 - x)) - 8) * x) - x) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 4088,
+          "unique_evaluations": 3455,
+          "cache_hits": 639,
+          "elapsed_seconds": 1.7143402299989248,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(2 + (((-5 + ((-3 + x) * x)) + 5) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3304,
+          "unique_evaluations": 2783,
+          "cache_hits": 527,
+          "elapsed_seconds": 1.27039533199968,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_x3_m3x2_2",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "(2 - (((3 - x) * x) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3696,
+          "unique_evaluations": 3100,
+          "cache_hits": 602,
+          "elapsed_seconds": 1.1012843529988459,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((0 - x) * (((4 - x) * x) - x)) - -2)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 4480,
+          "unique_evaluations": 3614,
+          "cache_hits": 872,
+          "elapsed_seconds": 1.8122676570001204,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_x3_x",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((((((x - -1) * x) - 6) - -6) * (x - 1)) + x) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2912,
+          "unique_evaluations": 2493,
+          "cache_hits": 425,
+          "elapsed_seconds": 0.8740250900009414,
+          "size": 17,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((x * x) * x) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 778,
+          "cache_hits": 180,
+          "elapsed_seconds": 0.32934578499953204,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_x3_x",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((x * x) * x) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1125,
+          "cache_hits": 225,
+          "elapsed_seconds": 0.37631460999909905,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((x * x) * x) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1098,
+          "cache_hits": 252,
+          "elapsed_seconds": 0.31376416300008714,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_x3_x",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((x * x) - -1) * x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 4088,
+          "unique_evaluations": 3326,
+          "cache_hits": 768,
+          "elapsed_seconds": 1.028984242999286,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((x * x) * x) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 777,
+          "cache_hits": 181,
+          "elapsed_seconds": 0.19668016600007832,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_x3_x",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "((1 + (x * x)) * x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1081,
+          "cache_hits": 269,
+          "elapsed_seconds": 0.39226098300059675,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((1 + (x * x)) * x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 760,
+          "cache_hits": 198,
+          "elapsed_seconds": 0.20931366299919318,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "cubic_x3_x",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "((((x * x) - ((6 - x) + x)) - -7) * x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1124,
+          "cache_hits": 226,
+          "elapsed_seconds": 0.3096079169990844,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((x * x) * x) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1736,
+          "unique_evaluations": 1403,
+          "cache_hits": 339,
+          "elapsed_seconds": 0.4232957840013114,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_2x_p1",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "((x + x) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 168,
+          "unique_evaluations": 125,
+          "cache_hits": 49,
+          "elapsed_seconds": 0.02723956400041061,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((x + x) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 416,
+          "cache_hits": 150,
+          "elapsed_seconds": 0.06383676800032845,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_2x_p1",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "((1 + x) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 168,
+          "unique_evaluations": 128,
+          "cache_hits": 46,
+          "elapsed_seconds": 0.029627085001266096,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((x + x) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 395,
+          "cache_hits": 171,
+          "elapsed_seconds": 0.06323214099938923,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_2x_p1",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "((x + x) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 168,
+          "unique_evaluations": 116,
+          "cache_hits": 58,
+          "elapsed_seconds": 0.0258957529986219,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((((-4 + x) + -2) - -7) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 419,
+          "cache_hits": 147,
+          "elapsed_seconds": 0.06150613400131988,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_2x_p1",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "((1 + x) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 414,
+          "cache_hits": 152,
+          "elapsed_seconds": 0.13462088000051153,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((x - -1) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 422,
+          "cache_hits": 144,
+          "elapsed_seconds": 0.10126779900019756,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_2x_p1",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "((1 + x) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 398,
+          "cache_hits": 168,
+          "elapsed_seconds": 0.13451933699980145,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((1 + x) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 168,
+          "unique_evaluations": 116,
+          "cache_hits": 58,
+          "elapsed_seconds": 0.01276042899917229,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_5x_m2",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "((5 * x) - 2)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 751,
+          "cache_hits": 207,
+          "elapsed_seconds": 0.22201163099998666,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((((-3 + x) + (3 * x)) + 1) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 426,
+          "cache_hits": 140,
+          "elapsed_seconds": 0.10128734299905773,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_5x_m2",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "(-2 - (-5 * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 738,
+          "cache_hits": 220,
+          "elapsed_seconds": 0.21620636399893556,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((((-6 + (4 * x)) + x) + 2) + 4) + -2)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1096,
+          "cache_hits": 254,
+          "elapsed_seconds": 0.3266607870009466,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_5x_m2",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "(-2 - (-5 * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 717,
+          "cache_hits": 241,
+          "elapsed_seconds": 0.21355264200064994,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((-3 + (5 * x)) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 745,
+          "cache_hits": 213,
+          "elapsed_seconds": 0.1946852700002637,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_5x_m2",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "((-3 + (x - (-4 * x))) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 426,
+          "cache_hits": 140,
+          "elapsed_seconds": 0.09522710499913956,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((3 * x) + (x - 2)) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1093,
+          "cache_hits": 257,
+          "elapsed_seconds": 0.28510236399961286,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_5x_m2",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "((-2 + (4 * x)) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1736,
+          "unique_evaluations": 1415,
+          "cache_hits": 327,
+          "elapsed_seconds": 0.41073121599947626,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(1 + (1 - (4 - ((4 * x) + x))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 757,
+          "cache_hits": 201,
+          "elapsed_seconds": 0.19801100400036376,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_m2x_m5",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(-5 - (x + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 408,
+          "cache_hits": 158,
+          "elapsed_seconds": 0.09183193699936965,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(6 + (-11 - (x + x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 168,
+          "unique_evaluations": 126,
+          "cache_hits": 48,
+          "elapsed_seconds": 0.011511615999552305,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_m2x_m5",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "(-4 - (-1 * ((-1 - x) - x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 401,
+          "cache_hits": 165,
+          "elapsed_seconds": 0.09032200000001467,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(-5 - (x + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 397,
+          "cache_hits": 169,
+          "elapsed_seconds": 0.09637204200043925,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_m2x_m5",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "((-6 - (-1 + x)) - x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 342,
+          "cache_hits": 224,
+          "elapsed_seconds": 0.08611799100071948,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(-5 - (2 * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 397,
+          "cache_hits": 169,
+          "elapsed_seconds": 0.0940014269999665,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_m2x_m5",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "(-5 - (x + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 411,
+          "cache_hits": 155,
+          "elapsed_seconds": 0.0946062000002712,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((-1 + (-4 - x)) - x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 393,
+          "cache_hits": 173,
+          "elapsed_seconds": 0.0893624929994985,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_m2x_m5",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "(-5 - (x + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 685,
+          "cache_hits": 273,
+          "elapsed_seconds": 0.17653313200025877,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(-1 * (((1 + x) + x) - -4))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 396,
+          "cache_hits": 170,
+          "elapsed_seconds": 0.04033787799926358,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_m3x_p4",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(4 + (-3 * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1074,
+          "cache_hits": 276,
+          "elapsed_seconds": 0.3383292510006868,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((-3 * x) - -4)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 402,
+          "cache_hits": 164,
+          "elapsed_seconds": 0.08842181599902688,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_m3x_p4",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "((-1 * x) + (1 - (x - (3 - x))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 704,
+          "cache_hits": 254,
+          "elapsed_seconds": 0.24307390300054976,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(1 - (((x - 3) + x) + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 762,
+          "cache_hits": 196,
+          "elapsed_seconds": 0.19285739500082855,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_m3x_p4",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "(4 + (-3 * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1032,
+          "cache_hits": 318,
+          "elapsed_seconds": 0.3375921549995837,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(4 + (-3 * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 735,
+          "cache_hits": 223,
+          "elapsed_seconds": 0.2045426229997247,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_m3x_p4",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "(4 + (-3 * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 727,
+          "cache_hits": 231,
+          "elapsed_seconds": 0.26090174700038915,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((2 + (6 - ((4 + x) + x))) - x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 418,
+          "cache_hits": 148,
+          "elapsed_seconds": 0.041794093000135035,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_m3x_p4",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "(4 - (3 * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 711,
+          "cache_hits": 247,
+          "elapsed_seconds": 0.26954390199898626,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((-5 * x) - ((-8 - (-4 + x)) - x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 705,
+          "cache_hits": 253,
+          "elapsed_seconds": 0.1845794630007731,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_x_m7",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "((-8 + x) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 168,
+          "unique_evaluations": 110,
+          "cache_hits": 64,
+          "elapsed_seconds": 0.009902480998789542,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(-7 + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 168,
+          "unique_evaluations": 125,
+          "cache_hits": 49,
+          "elapsed_seconds": 0.011264213999311323,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_x_m7",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "(-7 + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 168,
+          "unique_evaluations": 115,
+          "cache_hits": 59,
+          "elapsed_seconds": 0.010043623000456137,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(x - 7)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 168,
+          "unique_evaluations": 112,
+          "cache_hits": 62,
+          "elapsed_seconds": 0.010931500999504351,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_x_m7",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "(-7 + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 331,
+          "cache_hits": 235,
+          "elapsed_seconds": 0.09118603299975803,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(-7 + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 168,
+          "unique_evaluations": 112,
+          "cache_hits": 62,
+          "elapsed_seconds": 0.009750841998538817,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_x_m7",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "(-7 + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 387,
+          "cache_hits": 179,
+          "elapsed_seconds": 0.09210558899940224,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(-7 + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 381,
+          "cache_hits": 185,
+          "elapsed_seconds": 0.0908284229990386,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_x_m7",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "(-7 + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 168,
+          "unique_evaluations": 119,
+          "cache_hits": 55,
+          "elapsed_seconds": 0.01246026700027869,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(-7 + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 168,
+          "unique_evaluations": 125,
+          "cache_hits": 49,
+          "elapsed_seconds": 0.011019083998689894,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "max_two_lines",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "max(((1 + max(0, x)) + x), (3 - x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 760,
+          "cache_hits": 198,
+          "elapsed_seconds": 0.23474354999962088,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "max((3 + (0 - x)), (((x - -3) + x) - 2))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3696,
+          "unique_evaluations": 3046,
+          "cache_hits": 656,
+          "elapsed_seconds": 1.504940501999954,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "max_two_lines",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "(1 - min((-2 + min(4, x)), min((-2 * x), x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1736,
+          "unique_evaluations": 1406,
+          "cache_hits": 336,
+          "elapsed_seconds": 0.5025505539997539,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "max((((-6 + x) + x) + 7), (3 - min(3, x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1741,
+          "cache_hits": 393,
+          "elapsed_seconds": 0.7247273459997814,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "max_two_lines",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "max((4 + (-1 - x)), ((x - min(-1, x)) + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1749,
+          "cache_hits": 385,
+          "elapsed_seconds": 0.6967325869991328,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "max(((8 + (x - 7)) + x), max(1, (1 - (min(-2, (-x)) + x))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1740,
+          "cache_hits": 394,
+          "elapsed_seconds": 0.7171461999987514,
+          "size": 18,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "max_two_lines",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "(max(1, x) + max(max((1 + x), (-(x - max(2, x)))), x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3304,
+          "unique_evaluations": 2674,
+          "cache_hits": 636,
+          "elapsed_seconds": 1.3984547189993464,
+          "size": 16,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(2 + max(max(((x + x) + -1), 1), ((-1 + x) * -1)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2520,
+          "unique_evaluations": 2077,
+          "cache_hits": 449,
+          "elapsed_seconds": 1.2033145309997053,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "max_two_lines",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "max(((1 + x) + max((-1 - (-3 + x)), x)), (3 - x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1758,
+          "cache_hits": 376,
+          "elapsed_seconds": 0.6961610149992339,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "max(((1 + x) + x), ((-1 - x) - -4))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3696,
+          "unique_evaluations": 3005,
+          "cache_hits": 697,
+          "elapsed_seconds": 1.1401966089997586,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "max_x_0",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "max(0, x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 140,
+          "unique_evaluations": 94,
+          "cache_hits": 51,
+          "elapsed_seconds": 0.009205119000398554,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "max(0, x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 140,
+          "unique_evaluations": 97,
+          "cache_hits": 48,
+          "elapsed_seconds": 0.008467326000754838,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "max_x_0",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "max(0, x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 532,
+          "unique_evaluations": 383,
+          "cache_hits": 154,
+          "elapsed_seconds": 0.101568893998774,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "max(0, x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 140,
+          "unique_evaluations": 101,
+          "cache_hits": 44,
+          "elapsed_seconds": 0.009267703000659822,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "max_x_0",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "max(0, x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 532,
+          "unique_evaluations": 387,
+          "cache_hits": 150,
+          "elapsed_seconds": 0.0990246390010725,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "max(0, max(-6, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 140,
+          "unique_evaluations": 97,
+          "cache_hits": 48,
+          "elapsed_seconds": 0.008917463999750908,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "max_x_0",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "(x - min(0, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 140,
+          "unique_evaluations": 100,
+          "cache_hits": 45,
+          "elapsed_seconds": 0.06615120500100602,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "max(0, x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 140,
+          "unique_evaluations": 105,
+          "cache_hits": 40,
+          "elapsed_seconds": 0.009504009000011138,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "max_x_0",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "max(0, max(-3, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 140,
+          "unique_evaluations": 102,
+          "cache_hits": 43,
+          "elapsed_seconds": 0.009430247999262065,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "max(0, min(12, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 2.4375,
+          "proposals": 532,
+          "unique_evaluations": 403,
+          "cache_hits": 134,
+          "elapsed_seconds": 0.10060038399933546,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "maxmin_gap",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(1 + (1 - min((min(2, (4 - x)) - 4), x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 1031,
+          "cache_hits": 290,
+          "elapsed_seconds": 0.30837122699995234,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(max(max(-1, min((-1 + x), x)), (-1 - min(-2, x))) - -3)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3276,
+          "unique_evaluations": 2618,
+          "cache_hits": 663,
+          "elapsed_seconds": 1.3606535629987775,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "maxmin_gap",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "max(max((4 + (x - min(2, x))), (x - ((x + x) + -2))), x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2100,
+          "unique_evaluations": 1697,
+          "cache_hits": 408,
+          "elapsed_seconds": 0.6631880439999804,
+          "size": 17,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(2 - min((5 + (-7 - (x - min(2, x)))), x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3276,
+          "unique_evaluations": 2603,
+          "cache_hits": 678,
+          "elapsed_seconds": 1.2893083130002196,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "maxmin_gap",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "(2 + max(max(min(2, ((3 + (7 - x)) - 7)), (-x)), x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2100,
+          "unique_evaluations": 1685,
+          "cache_hits": 420,
+          "elapsed_seconds": 0.7783073629998398,
+          "size": 16,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(max(max(2, x), min(5, x)) - min(-2, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 532,
+          "unique_evaluations": 386,
+          "cache_hits": 151,
+          "elapsed_seconds": 0.10155514300095092,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "maxmin_gap",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "max(4, (max(2, (x - -2)) - min(0, x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1708,
+          "unique_evaluations": 1362,
+          "cache_hits": 351,
+          "elapsed_seconds": 0.5252867369999876,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "max(4, (max(max(-7, x), (-x)) - -2))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1708,
+          "unique_evaluations": 1386,
+          "cache_hits": 327,
+          "elapsed_seconds": 0.49217970199970296,
+          "size": 10,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "maxmin_gap",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "max(max((2 + x), max(-3, (2 - min((-2 + (x - min(7, x))), x)))), x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1708,
+          "unique_evaluations": 1375,
+          "cache_hits": 338,
+          "elapsed_seconds": 0.5099496639995778,
+          "size": 19,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(max(1, min(max(2, ((3 + x) - -1)), (max(2, x) - min(-1, x)))) - min(-1, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 5236,
+          "unique_evaluations": 3983,
+          "cache_hits": 1258,
+          "elapsed_seconds": 2.3995982879987423,
+          "size": 21,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_2x2_m3x_2",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((((x - (2 - x)) * x) + (-2 - x)) + 3) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1747,
+          "cache_hits": 387,
+          "elapsed_seconds": 0.6182435509999777,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((((-5 + x) + x) * x) + (x - (1 - x))) + 3)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1736,
+          "unique_evaluations": 1398,
+          "cache_hits": 344,
+          "elapsed_seconds": 0.4809081610001158,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_2x2_m3x_2",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "((((x - 1) * x) + (2 - (-3 + x))) + (((x - 1) * x) + (5 - ((8 - x) + x))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1736,
+          "unique_evaluations": 1408,
+          "cache_hits": 334,
+          "elapsed_seconds": 0.5316621450001549,
+          "size": 25,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(2 + (((-6 + x) + (x - -3)) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1122,
+          "cache_hits": 228,
+          "elapsed_seconds": 0.39313595599924156,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_2x2_m3x_2",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "((((-1 + x) + x) * x) - (((x - 6) + x) + 4))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1745,
+          "cache_hits": 389,
+          "elapsed_seconds": 0.6018048610003461,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((((x - (5 - x)) * x) + ((-5 + (x - 1)) - (-2 - x))) + 6)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1736,
+          "unique_evaluations": 1435,
+          "cache_hits": 307,
+          "elapsed_seconds": 0.4020833960003074,
+          "size": 19,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_2x2_m3x_2",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "((((-2 + x) + x) * x) + (2 - x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1736,
+          "unique_evaluations": 1453,
+          "cache_hits": 289,
+          "elapsed_seconds": 0.4969517219997215,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((x - (3 - x)) * x) - (3 + (x - (5 + x))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1094,
+          "cache_hits": 256,
+          "elapsed_seconds": 0.3134843940006249,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_2x2_m3x_2",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "((((1 + x) * (1 + x)) + ((x - 5) * x)) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1114,
+          "cache_hits": 236,
+          "elapsed_seconds": 0.38511277100042207,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((8 + ((x - (3 - x)) * x)) + -6)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1113,
+          "cache_hits": 237,
+          "elapsed_seconds": 0.3981716679991223,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_3x2_2x_1",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((((2 + x) - (-2 * x)) * x) - ((-x) - -4)) - (-5 + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1813,
+          "cache_hits": 321,
+          "elapsed_seconds": 0.6204856849999487,
+          "size": 18,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((1 + x) + ((3 * x) * x)) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1746,
+          "cache_hits": 388,
+          "elapsed_seconds": 0.6087603440009843,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_3x2_2x_1",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "((x + x) + ((3 + ((3 * x) * x)) - 2))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1086,
+          "cache_hits": 264,
+          "elapsed_seconds": 0.3848349870004313,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((1 + ((3 * x) * x)) + (x + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1759,
+          "cache_hits": 375,
+          "elapsed_seconds": 0.614826680999613,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_3x2_2x_1",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((3 + (3 * x)) * x) - (-1 + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1736,
+          "unique_evaluations": 1455,
+          "cache_hits": 287,
+          "elapsed_seconds": 0.5041918380011339,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((((x + x) + x) * x) - ((-x) + (-1 - x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2520,
+          "unique_evaluations": 2086,
+          "cache_hits": 440,
+          "elapsed_seconds": 0.7924999709994154,
+          "size": 14,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_3x2_2x_1",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "(1 + (((6 + x) + (x - (4 - x))) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1736,
+          "unique_evaluations": 1443,
+          "cache_hits": 299,
+          "elapsed_seconds": 0.5029244589986774,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(1 + (((2 + x) + (2 * x)) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 424,
+          "cache_hits": 142,
+          "elapsed_seconds": 0.09787098099877767,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_3x2_2x_1",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((1 + x) + (3 * (x * x))) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1080,
+          "cache_hits": 270,
+          "elapsed_seconds": 0.3956121480005095,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((x + x) + 1) + ((3 * x) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1736,
+          "unique_evaluations": 1433,
+          "cache_hits": 309,
+          "elapsed_seconds": 0.49407903700011957,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_mx2_4x_3",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((((3 - x) * x) + x) + 1) - -2)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 776,
+          "cache_hits": 182,
+          "elapsed_seconds": 0.19571739499951946,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((8 + ((4 - x) * x)) - 5)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1034,
+          "cache_hits": 316,
+          "elapsed_seconds": 0.2856514089999109,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_mx2_4x_3",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "((4 + ((4 + (-1 - x)) * x)) + (x - 1))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1082,
+          "cache_hits": 268,
+          "elapsed_seconds": 0.35468865700022434,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((-(x * x)) - (((-4 * x) - (4 + x)) + (x - -1)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1074,
+          "cache_hits": 276,
+          "elapsed_seconds": 0.31149990999983856,
+          "size": 16,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_mx2_4x_3",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((1 + x) * 5) - ((-1 + (x - -3)) + (x * x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1733,
+          "cache_hits": 401,
+          "elapsed_seconds": 0.5904696740017243,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(-3 + (((5 - x) * x) - (x - 6)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1736,
+          "unique_evaluations": 1381,
+          "cache_hits": 361,
+          "elapsed_seconds": 0.3996948109997902,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_mx2_4x_3",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "(3 + (((7 - x) - 3) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2520,
+          "unique_evaluations": 2121,
+          "cache_hits": 405,
+          "elapsed_seconds": 0.7709610719994089,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((((2 - x) * x) + x) + x) + 3)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1075,
+          "cache_hits": 275,
+          "elapsed_seconds": 0.23797005800042825,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_mx2_4x_3",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "(-1 - ((((3 + x) + ((-6 + x) * x)) + -2) - (5 - x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1082,
+          "cache_hits": 268,
+          "elapsed_seconds": 0.2892226619987923,
+          "size": 17,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((((x - 3) + x) + x) + (-1 - ((x * x) + (x - ((x - (3 - x)) - -10)))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1736,
+          "unique_evaluations": 1396,
+          "cache_hits": 346,
+          "elapsed_seconds": 0.4187858050008799,
+          "size": 23,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_x2_m4",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "((x * x) - 4)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 418,
+          "cache_hits": 148,
+          "elapsed_seconds": 0.10413411400077166,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(-4 + (x * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 708,
+          "cache_hits": 250,
+          "elapsed_seconds": 0.13814145699871005,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_x2_m4",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "((x * x) - 4)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 742,
+          "cache_hits": 216,
+          "elapsed_seconds": 0.19166510600007314,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(-4 + (x * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 729,
+          "cache_hits": 229,
+          "elapsed_seconds": 0.13790135599992936,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_x2_m4",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "(-4 + (x * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 401,
+          "cache_hits": 165,
+          "elapsed_seconds": 0.09381768999992346,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((x * x) - 4)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 732,
+          "cache_hits": 226,
+          "elapsed_seconds": 0.1915725550006755,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_x2_m4",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "((-5 + (x * x)) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 400,
+          "cache_hits": 166,
+          "elapsed_seconds": 0.04156334499930381,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(-4 + (x * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1029,
+          "cache_hits": 321,
+          "elapsed_seconds": 0.30432715699862456,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_x2_m4",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "(-4 + (x * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 756,
+          "cache_hits": 202,
+          "elapsed_seconds": 0.2094488780003303,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((-4 - x) + x) + (x * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 439,
+          "cache_hits": 127,
+          "elapsed_seconds": 0.10091496099994401,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_x2_x_1",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "((x * x) + (x - -1))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 732,
+          "cache_hits": 226,
+          "elapsed_seconds": 0.1948019560004468,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(1 + ((1 + x) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 438,
+          "cache_hits": 128,
+          "elapsed_seconds": 0.09630875599941646,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_x2_x_1",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((x * x) + (x - (6 + x))) + (x - -7))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 710,
+          "cache_hits": 248,
+          "elapsed_seconds": 0.195436031999634,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((1 + ((2 + x) * x)) + (-1 * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1034,
+          "cache_hits": 316,
+          "elapsed_seconds": 0.30917178399977274,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_x2_x_1",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((x * x) - -1) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1033,
+          "cache_hits": 317,
+          "elapsed_seconds": 0.29165070700037177,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(1 + ((1 + x) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 421,
+          "cache_hits": 145,
+          "elapsed_seconds": 0.10358531800011406,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_x2_x_1",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "((x * x) + (x - -1))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1091,
+          "cache_hits": 259,
+          "elapsed_seconds": 0.30106936800075346,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((1 + (x * x)) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 754,
+          "cache_hits": 204,
+          "elapsed_seconds": 0.19428263300142135,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quad_x2_x_1",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "((5 + x) + ((x * x) - 4))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 752,
+          "cache_hits": 206,
+          "elapsed_seconds": 0.21164273800059163,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(1 + ((1 + x) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 765,
+          "cache_hits": 193,
+          "elapsed_seconds": 0.20322749899969494,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quartic_2x4_mx2_3",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(12 + (((((x - (x - -5)) - -71) * x) * x) - ((((-13 + x) + (-4 - x)) + (-6 + (x * x))) * -13)))",
+          "train_mae": 245.55555555555554,
+          "validation_mae": 587.0,
+          "test_mae": 37364.6,
+          "proposals": 9184,
+          "unique_evaluations": 5442,
+          "cache_hits": 3748,
+          "elapsed_seconds": 5.60749676100022,
+          "size": 29,
+          "stopped_reason": "generation_limit"
+        },
+        "vhss_prng": {
+          "program": "(((((((-1 + x) + 4) + (x - (-7 * x))) * x) + (4 - ((5 + x) * (8 - x)))) * 8) - 1)",
+          "train_mae": 250.22222222222223,
+          "validation_mae": 578.5,
+          "test_mae": 37226.1,
+          "proposals": 9184,
+          "unique_evaluations": 6468,
+          "cache_hits": 2722,
+          "elapsed_seconds": 5.687606219000372,
+          "size": 27,
+          "stopped_reason": "generation_limit"
+        }
+      }
+    },
+    {
+      "task": "quartic_2x4_mx2_3",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "(3 + (((((x + x) * x) * x) - x) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 4088,
+          "unique_evaluations": 3502,
+          "cache_hits": 592,
+          "elapsed_seconds": 2.0255582530007814,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((((((7 + ((x - (4 - x)) - 3)) * (x * x)) - (-6 + x)) * x) - -3) - (6 * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 8792,
+          "unique_evaluations": 5815,
+          "cache_hits": 2983,
+          "elapsed_seconds": 4.489765188000092,
+          "size": 25,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quartic_2x4_mx2_3",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((((((-4 + x) * ((x - -7) + x)) - -26) + x) * x) * x) - (-4 + ((1 - x) * (x - -1))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 5264,
+          "unique_evaluations": 3650,
+          "cache_hits": 1620,
+          "elapsed_seconds": 3.190129552000144,
+          "size": 27,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((-224 + (-15 - (-1 - (-6 - (((6 + x) * (6 - x)) - -5))))) + ((6 * (-(-13 * x))) * x))",
+          "train_mae": 245.33333333333334,
+          "validation_mae": 585.0,
+          "test_mae": 37362.6,
+          "proposals": 9184,
+          "unique_evaluations": 6069,
+          "cache_hits": 3121,
+          "elapsed_seconds": 5.671657041000799,
+          "size": 26,
+          "stopped_reason": "generation_limit"
+        }
+      }
+    },
+    {
+      "task": "quartic_2x4_mx2_3",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((3 + ((((x + x) * x) * x) - ((3 - (-5 - x)) - 3))) * x) + (x - (-3 + (0 - x))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 4872,
+          "unique_evaluations": 4058,
+          "cache_hits": 820,
+          "elapsed_seconds": 2.1044934549991012,
+          "size": 27,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((((x + x) * ((x * x) - -6)) * x) - (((((x * x) + ((48 + x) - 43)) + 5) * 6) + (4 - x)))",
+          "train_mae": 42.77777777777778,
+          "validation_mae": 230.5,
+          "test_mae": 916.5,
+          "proposals": 9184,
+          "unique_evaluations": 6607,
+          "cache_hits": 2583,
+          "elapsed_seconds": 5.612828506000369,
+          "size": 29,
+          "stopped_reason": "generation_limit"
+        }
+      }
+    },
+    {
+      "task": "quartic_2x4_mx2_3",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((((((-2 * (x - (x * x))) - (-(x + x))) * x) + (-4 - (-4 + x))) * x) - -7) - 4)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 4480,
+          "unique_evaluations": 3558,
+          "cache_hits": 928,
+          "elapsed_seconds": 2.2151186689989117,
+          "size": 26,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((((-7 * x) + x) + (-2 - (-2 - (((-5 + (x * x)) + 49) * x)))) * x) - (73 + (6 - (-15 + x))))",
+          "train_mae": 132.11111111111111,
+          "validation_mae": 299.0,
+          "test_mae": 18774.8,
+          "proposals": 9184,
+          "unique_evaluations": 5801,
+          "cache_hits": 3389,
+          "elapsed_seconds": 5.283906974998899,
+          "size": 29,
+          "stopped_reason": "generation_limit"
+        }
+      }
+    },
+    {
+      "task": "quartic_square",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(4 + (((-(4 + ((-x) * x))) * x) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 4088,
+          "unique_evaluations": 3304,
+          "cache_hits": 790,
+          "elapsed_seconds": 1.8684108100005687,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((((x * x) * x) * x) - (-5 + (((1 + x) + (((5 * x) - x) * x)) - x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2912,
+          "unique_evaluations": 2493,
+          "cache_hits": 425,
+          "elapsed_seconds": 1.0318665110007714,
+          "size": 23,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quartic_square",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((((x * x) * x) - ((1 + (3 * x)) + x)) * x) + (4 - (-x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1808,
+          "cache_hits": 326,
+          "elapsed_seconds": 0.7990314020007645,
+          "size": 20,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((((33 * x) + x) + (((42 - (-5 - x)) + x) - 4)) * (-1 + x)) - (4 + ((-7 * (-7 - x)) - -44)))",
+          "train_mae": 122.66666666666667,
+          "validation_mae": 292.5,
+          "test_mae": 18681.3,
+          "proposals": 9184,
+          "unique_evaluations": 5588,
+          "cache_hits": 3602,
+          "elapsed_seconds": 4.8045905380004115,
+          "size": 29,
+          "stopped_reason": "generation_limit"
+        }
+      }
+    },
+    {
+      "task": "quartic_square",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((6 + x) + (-(2 + x))) + (((((x - 1) * x) + ((2 * x) - (4 + x))) * x) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 5264,
+          "unique_evaluations": 4355,
+          "cache_hits": 915,
+          "elapsed_seconds": 2.690444439998828,
+          "size": 26,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((((1 + ((x * x) - 5)) * x) * x) - -4)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2912,
+          "unique_evaluations": 2447,
+          "cache_hits": 471,
+          "elapsed_seconds": 0.997371341998587,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quartic_square",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((((-5 + (x * x)) * x) - (3 - (x - -3))) * x) - -4)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 4480,
+          "unique_evaluations": 3811,
+          "cache_hits": 675,
+          "elapsed_seconds": 1.7962385270002414,
+          "size": 17,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((-3 + (((((((x - 1) * x) + x) - 2) - 2) * x) * x)) + 7)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 4872,
+          "unique_evaluations": 4076,
+          "cache_hits": 802,
+          "elapsed_seconds": 2.3910614189990156,
+          "size": 19,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quartic_square",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((((((23 - ((-11 - x) + x)) * x) + x) + x) * x) + (((x - 6) - 114) - 15)) + (-5 - x))",
+          "train_mae": 122.66666666666667,
+          "validation_mae": 292.5,
+          "test_mae": 18681.3,
+          "proposals": 9184,
+          "unique_evaluations": 5344,
+          "cache_hits": 3846,
+          "elapsed_seconds": 6.268569198999103,
+          "size": 27,
+          "stopped_reason": "generation_limit"
+        },
+        "vhss_prng": {
+          "program": "(((((((x * x) + (x - (5 + x))) * x) + x) * x) + x) + (-(1 - (5 - x))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3696,
+          "unique_evaluations": 3075,
+          "cache_hits": 627,
+          "elapsed_seconds": 1.8954360759998963,
+          "size": 24,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quartic_x4_x2_1",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(1 + (((-1 + (x - -1)) + (((-1 * x) * (0 - x)) * x)) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 4088,
+          "unique_evaluations": 3463,
+          "cache_hits": 631,
+          "elapsed_seconds": 1.8923019129997556,
+          "size": 19,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((((((-5 + x) + (7 * x)) + -6) + -4) * 5) * (x - -2)) + (7 - (-(((2 + x) + -8) * x))))",
+          "train_mae": 123.11111111111111,
+          "validation_mae": 295.5,
+          "test_mae": 18681.3,
+          "proposals": 9184,
+          "unique_evaluations": 6084,
+          "cache_hits": 3106,
+          "elapsed_seconds": 6.1810835559990664,
+          "size": 28,
+          "stopped_reason": "generation_limit"
+        }
+      }
+    },
+    {
+      "task": "quartic_x4_x2_1",
+      "seed": 1,
+      "methods": {
+        "vhss_hash": {
+          "program": "((((((-1 + x) + 7) + -8) * ((6 + ((((4 + x) - 2) * x) * x)) - ((-5 * x) - 2))) + x) + 18)",
+          "train_mae": 2.3333333333333335,
+          "validation_mae": 6.5,
+          "test_mae": 11.5,
+          "proposals": 9184,
+          "unique_evaluations": 5572,
+          "cache_hits": 3618,
+          "elapsed_seconds": 6.695369197999753,
+          "size": 29,
+          "stopped_reason": "generation_limit"
+        },
+        "vhss_prng": {
+          "program": "(-140 + ((((x + x) + x) + ((5 * (6 * x)) + ((x - (-8 * x)) - x))) * x))",
+          "train_mae": 123.66666666666667,
+          "validation_mae": 292.5,
+          "test_mae": 18678.3,
+          "proposals": 9184,
+          "unique_evaluations": 5753,
+          "cache_hits": 3437,
+          "elapsed_seconds": 5.8313271129991335,
+          "size": 23,
+          "stopped_reason": "generation_limit"
+        }
+      }
+    },
+    {
+      "task": "quartic_x4_x2_1",
+      "seed": 2,
+      "methods": {
+        "vhss_hash": {
+          "program": "((4 + ((-2 + (x * x)) * (3 + (x * x)))) + 3)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2912,
+          "unique_evaluations": 2505,
+          "cache_hits": 413,
+          "elapsed_seconds": 1.3079586170006223,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((((-((x * x) * (-x))) + x) * x) - -1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 6832,
+          "unique_evaluations": 5214,
+          "cache_hits": 1624,
+          "elapsed_seconds": 3.3149120310008584,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quartic_x4_x2_1",
+      "seed": 3,
+      "methods": {
+        "vhss_hash": {
+          "program": "((5 * (((8 * x) * x) - (30 - x))) + (x - (-7 - (((-2 + x) + -4) * x))))",
+          "train_mae": 122.66666666666667,
+          "validation_mae": 292.5,
+          "test_mae": 18681.3,
+          "proposals": 9184,
+          "unique_evaluations": 7097,
+          "cache_hits": 2093,
+          "elapsed_seconds": 5.491157135998947,
+          "size": 23,
+          "stopped_reason": "generation_limit"
+        },
+        "vhss_prng": {
+          "program": "((7 + (((((-1 * x) * (0 - (x * x))) + ((-3 + (x - -3)) - x)) + x) * x)) - 6)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 5264,
+          "unique_evaluations": 3866,
+          "cache_hits": 1404,
+          "elapsed_seconds": 2.70518215499942,
+          "size": 25,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "quartic_x4_x2_1",
+      "seed": 4,
+      "methods": {
+        "vhss_hash": {
+          "program": "((1 + ((1 + x) * x)) * ((x * x) + ((-5 - (-5 + x)) - -1)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1801,
+          "cache_hits": 333,
+          "elapsed_seconds": 0.7833343929996772,
+          "size": 19,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((((1 + (x * x)) * x) * x) - -1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3696,
+          "unique_evaluations": 3142,
+          "cache_hits": 560,
+          "elapsed_seconds": 1.8122993180004414,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    }
+  ]
+}

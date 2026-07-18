@@ -1,0 +1,14 @@
+Looking in indexes: https://reader:****@packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/pypi/pypi-public/simple
+Processing /mnt/data/SN_Computer_Science_VHSS_Submission_Package/04_Software
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: vhss-hashwave
+  Building wheel for vhss-hashwave (pyproject.toml): started
+  Building wheel for vhss-hashwave (pyproject.toml): finished with status 'done'
+  Created wheel for vhss-hashwave: filename=vhss_hashwave-1.2.0-py3-none-any.whl size=24782 sha256=43bb0a39dbe123fe9a06cf75089aa08a6c068b74eb69de8b986c6995fb045778
+  Stored in directory: /tmp/pip-ephem-wheel-cache-oq3oz7r9/wheels/b8/ff/4e/8bb222fcdc2827bbeeefc3a676079ab81dd58142ab9965275f
+Successfully built vhss-hashwave

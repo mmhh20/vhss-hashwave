@@ -1,0 +1,2520 @@
+{
+  "configuration": {
+    "tasks": 30,
+    "seeds": 1,
+    "workers": 6,
+    "requested_evaluations": 3000
+  },
+  "summary": {
+    "methods": {
+      "vhss_hash": {
+        "runs": 30,
+        "test_exact": 29,
+        "test_exact_rate": 0.9666666666666667,
+        "median_test_mae": 0.0,
+        "median_proposals": 1330.0,
+        "median_elapsed_seconds": 0.29452240000046004,
+        "median_size": 9.5
+      },
+      "vhss_prng": {
+        "runs": 30,
+        "test_exact": 28,
+        "test_exact_rate": 0.9333333333333333,
+        "median_test_mae": 0.0,
+        "median_proposals": 1708.0,
+        "median_elapsed_seconds": 0.3225920209997639,
+        "median_size": 11.0
+      },
+      "standard_gp": {
+        "runs": 30,
+        "test_exact": 25,
+        "test_exact_rate": 0.8333333333333334,
+        "median_test_mae": 0.0,
+        "median_proposals": 1115.5,
+        "median_elapsed_seconds": 0.39803485150059714,
+        "median_size": 17.0
+      },
+      "beam_mutation": {
+        "runs": 30,
+        "test_exact": 21,
+        "test_exact_rate": 0.7,
+        "median_test_mae": 0.0,
+        "median_proposals": 2267.5,
+        "median_elapsed_seconds": 0.46356348100107425,
+        "median_size": 9.5
+      },
+      "simulated_annealing": {
+        "runs": 30,
+        "test_exact": 20,
+        "test_exact_rate": 0.6666666666666666,
+        "median_test_mae": 0.0,
+        "median_proposals": 1480.5,
+        "median_elapsed_seconds": 0.44391785750030976,
+        "median_size": 18.5
+      },
+      "random_program": {
+        "runs": 30,
+        "test_exact": 8,
+        "test_exact_rate": 0.26666666666666666,
+        "median_test_mae": 1.0,
+        "median_proposals": 3000.0,
+        "median_elapsed_seconds": 0.8840765934992305,
+        "median_size": 7.5
+      }
+    },
+    "families": {
+      "abs": {
+        "vhss_hash": 1.0,
+        "vhss_prng": 1.0,
+        "standard_gp": 0.6666666666666666,
+        "beam_mutation": 0.6666666666666666,
+        "simulated_annealing": 1.0,
+        "random_program": 0.6666666666666666
+      },
+      "bit": {
+        "vhss_hash": 1.0,
+        "vhss_prng": 1.0,
+        "standard_gp": 1.0,
+        "beam_mutation": 1.0,
+        "simulated_annealing": 0.6,
+        "random_program": 0.4
+      },
+      "clamp": {
+        "vhss_hash": 1.0,
+        "vhss_prng": 1.0,
+        "standard_gp": 1.0,
+        "beam_mutation": 1.0,
+        "simulated_annealing": 1.0,
+        "random_program": 0.0
+      },
+      "cubic": {
+        "vhss_hash": 1.0,
+        "vhss_prng": 1.0,
+        "standard_gp": 0.6,
+        "beam_mutation": 0.4,
+        "simulated_annealing": 0.2,
+        "random_program": 0.0
+      },
+      "lin": {
+        "vhss_hash": 1.0,
+        "vhss_prng": 1.0,
+        "standard_gp": 1.0,
+        "beam_mutation": 1.0,
+        "simulated_annealing": 1.0,
+        "random_program": 0.6
+      },
+      "max": {
+        "vhss_hash": 1.0,
+        "vhss_prng": 1.0,
+        "standard_gp": 1.0,
+        "beam_mutation": 0.5,
+        "simulated_annealing": 0.5,
+        "random_program": 0.5
+      },
+      "maxmin": {
+        "vhss_hash": 1.0,
+        "vhss_prng": 1.0,
+        "standard_gp": 1.0,
+        "beam_mutation": 1.0,
+        "simulated_annealing": 1.0,
+        "random_program": 0.0
+      },
+      "quad": {
+        "vhss_hash": 1.0,
+        "vhss_prng": 1.0,
+        "standard_gp": 1.0,
+        "beam_mutation": 0.6,
+        "simulated_annealing": 1.0,
+        "random_program": 0.0
+      },
+      "quartic": {
+        "vhss_hash": 0.6666666666666666,
+        "vhss_prng": 0.3333333333333333,
+        "standard_gp": 0.3333333333333333,
+        "beam_mutation": 0.3333333333333333,
+        "simulated_annealing": 0.0,
+        "random_program": 0.0
+      }
+    },
+    "pairwise_vs_vhss_hash": {
+      "vhss_prng": {
+        "vhss_wins": 13,
+        "ties": 2,
+        "vhss_losses": 15,
+        "wilcoxon_p_raw": 0.9808795062755976,
+        "holm_adjusted_p": 0.9808795062755976
+      },
+      "standard_gp": {
+        "vhss_wins": 11,
+        "ties": 0,
+        "vhss_losses": 19,
+        "wilcoxon_p_raw": 0.18023948561950076,
+        "holm_adjusted_p": 0.3604789712390015
+      },
+      "beam_mutation": {
+        "vhss_wins": 23,
+        "ties": 0,
+        "vhss_losses": 7,
+        "wilcoxon_p_raw": 0.02640441598539722,
+        "holm_adjusted_p": 0.07921324795619165
+      },
+      "simulated_annealing": {
+        "vhss_wins": 18,
+        "ties": 0,
+        "vhss_losses": 12,
+        "wilcoxon_p_raw": 0.015165593487717398,
+        "holm_adjusted_p": 0.06066237395086959
+      },
+      "random_program": {
+        "vhss_wins": 28,
+        "ties": 0,
+        "vhss_losses": 2,
+        "wilcoxon_p_raw": 8.075058645904074e-06,
+        "holm_adjusted_p": 4.037529322952037e-05
+      }
+    }
+  },
+  "elapsed_seconds": 28.58672063999984,
+  "runs": [
+    {
+      "task": "abs_2x_m3_p1",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(abs(((-3 + x) + x)) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2548,
+          "unique_evaluations": 2008,
+          "cache_hits": 547,
+          "elapsed_seconds": 0.4530848590002279,
+          "size": 8,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((abs((((x + x) + (-3 - x)) + x)) + 2) + -1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2548,
+          "unique_evaluations": 1987,
+          "cache_hits": 568,
+          "elapsed_seconds": 0.3888136019995727,
+          "size": 14,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "(x - ((((11 - (abs((-1 + x)) - (((-16 + x) - -4) - 3))) - -2) - 1) - abs(x)))",
+          "train_mae": 1.7333333333333334,
+          "validation_mae": 2.0,
+          "test_mae": 2.0,
+          "proposals": 3000,
+          "unique_evaluations": 2222,
+          "cache_hits": 790,
+          "elapsed_seconds": 1.022736076000001,
+          "size": 23,
+          "stopped_reason": "evaluation_limit"
+        },
+        "beam_mutation": {
+          "program": "abs(((3 * x) - (4 + x)))",
+          "train_mae": 0.8,
+          "validation_mae": 1.0,
+          "test_mae": 1.0,
+          "proposals": 3000,
+          "unique_evaluations": 2256,
+          "cache_hits": 747,
+          "elapsed_seconds": 0.4816380450010911,
+          "size": 8,
+          "stopped_reason": "evaluation_limit"
+        },
+        "simulated_annealing": {
+          "program": "(abs(((-2 + (-(-2 + (-2 * x)))) - (-3 + (4 * x)))) + (x - (x - 1)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1876,
+          "unique_evaluations": 1460,
+          "cache_hits": 416,
+          "elapsed_seconds": 0.4222884470000281,
+          "size": 21,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "abs((((x + x) + -8) + 5))",
+          "train_mae": 1.0,
+          "validation_mae": 1.0,
+          "test_mae": 1.0,
+          "proposals": 3000,
+          "unique_evaluations": 1486,
+          "cache_hits": 1514,
+          "elapsed_seconds": 0.8222665329994925,
+          "size": 8,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "abs_double",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(abs((-(((abs((2 - x)) - -2) + x) - (2 - x)))) + (2 - x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3724,
+          "unique_evaluations": 2866,
+          "cache_hits": 865,
+          "elapsed_seconds": 0.8099655989990424,
+          "size": 18,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((abs((-2 - (1 - abs((2 * x))))) + 1) + 2)",
+          "train_mae": 0.13333333333333333,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 9212,
+          "unique_evaluations": 6396,
+          "cache_hits": 2823,
+          "elapsed_seconds": 1.910987909999676,
+          "size": 13,
+          "stopped_reason": "generation_limit"
+        },
+        "standard_gp": {
+          "program": "abs((-2 * x))",
+          "train_mae": 0.5333333333333333,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 9212,
+          "unique_evaluations": 6977,
+          "cache_hits": 2248,
+          "elapsed_seconds": 2.662140061000173,
+          "size": 4,
+          "stopped_reason": "evaluation_limit"
+        },
+        "beam_mutation": {
+          "program": "abs((x + x))",
+          "train_mae": 0.5333333333333333,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 9212,
+          "unique_evaluations": 7123,
+          "cache_hits": 2093,
+          "elapsed_seconds": 1.4309234259999357,
+          "size": 4,
+          "stopped_reason": "evaluation_limit"
+        },
+        "simulated_annealing": {
+          "program": "abs((-2 * x))",
+          "train_mae": 0.5333333333333333,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 9212,
+          "unique_evaluations": 6264,
+          "cache_hits": 2948,
+          "elapsed_seconds": 1.881048858000213,
+          "size": 4,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "abs((-2 * x))",
+          "train_mae": 0.5333333333333333,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 9212,
+          "unique_evaluations": 4194,
+          "cache_hits": 5018,
+          "elapsed_seconds": 2.609219318999749,
+          "size": 4,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "abs_x",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "abs(x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 196,
+          "unique_evaluations": 139,
+          "cache_hits": 64,
+          "elapsed_seconds": 0.014897332001055474,
+          "size": 2,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "abs(x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 196,
+          "unique_evaluations": 134,
+          "cache_hits": 69,
+          "elapsed_seconds": 0.012697034000666463,
+          "size": 2,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "abs(x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 98,
+          "unique_evaluations": 83,
+          "cache_hits": 31,
+          "elapsed_seconds": 0.05369098299888719,
+          "size": 2,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "abs(x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 550,
+          "unique_evaluations": 404,
+          "cache_hits": 152,
+          "elapsed_seconds": 0.04562217599959695,
+          "size": 2,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "abs(x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 898,
+          "unique_evaluations": 676,
+          "cache_hits": 222,
+          "elapsed_seconds": 0.1922285529999499,
+          "size": 2,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "abs(x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 61,
+          "unique_evaluations": 53,
+          "cache_hits": 8,
+          "elapsed_seconds": 0.012342609999905108,
+          "size": 2,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_and_or",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((3 & x) | 1) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 924,
+          "unique_evaluations": 714,
+          "cache_hits": 215,
+          "elapsed_seconds": 0.14134403000025486,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((((x + x) & 5) + (x & (2 ^ x))) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1708,
+          "unique_evaluations": 1241,
+          "cache_hits": 472,
+          "elapsed_seconds": 0.3045537170000898,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "(((-3 | (-3 ^ x)) + x) + 4)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 408,
+          "unique_evaluations": 349,
+          "cache_hits": 74,
+          "elapsed_seconds": 0.14484063099916966,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "((-5 | ((0 - (7 + x)) | x)) & (x - (-3 | (7 ^ x))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2591,
+          "unique_evaluations": 1993,
+          "cache_hits": 603,
+          "elapsed_seconds": 0.4454889170010574,
+          "size": 17,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "((3 & (-3 | x)) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1069,
+          "unique_evaluations": 637,
+          "cache_hits": 432,
+          "elapsed_seconds": 0.46554726800059143,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "((3 & x) + x)",
+          "train_mae": 0.5,
+          "validation_mae": 0.5,
+          "test_mae": 0.5,
+          "proposals": 3000,
+          "unique_evaluations": 1427,
+          "cache_hits": 1573,
+          "elapsed_seconds": 1.0303430759995535,
+          "size": 5,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "bit_mask",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "((((-6 & x) & 4) & x) + ((((-6 & x) & x) | 3) ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 1015,
+          "cache_hits": 306,
+          "elapsed_seconds": 0.2678922209997836,
+          "size": 17,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((7 & x) ^ 3)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2100,
+          "unique_evaluations": 1610,
+          "cache_hits": 495,
+          "elapsed_seconds": 0.35742661400036013,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "(7 & (-5 ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1139,
+          "unique_evaluations": 944,
+          "cache_hits": 207,
+          "elapsed_seconds": 0.4071396569997887,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "((13 + (6 - ((-2 & x) | x))) & 7)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1247,
+          "unique_evaluations": 901,
+          "cache_hits": 351,
+          "elapsed_seconds": 0.16189278899946657,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "((0 & ((4 - (3 + x)) | x)) ^ ((((8 + (-7 | x)) & ((-8 - x) | x)) & x) ^ 3))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 607,
+          "unique_evaluations": 390,
+          "cache_hits": 217,
+          "elapsed_seconds": 0.16453187799925217,
+          "size": 25,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "(-(-8 | (-8 | (4 ^ (-7 | x)))))",
+          "train_mae": 0.5,
+          "validation_mae": 0.5,
+          "test_mae": 0.5,
+          "proposals": 3000,
+          "unique_evaluations": 1491,
+          "cache_hits": 1509,
+          "elapsed_seconds": 0.6650804040000367,
+          "size": 10,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "bit_mix5",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "((2 | x) ^ (7 - (3 & x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 1028,
+          "cache_hits": 293,
+          "elapsed_seconds": 0.2926605100001325,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(-1 & ((4 ^ x) | (5 ^ x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 532,
+          "unique_evaluations": 383,
+          "cache_hits": 154,
+          "elapsed_seconds": 0.07889950800017687,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "(((((((((-2 + x) & x) | 5) & x) & x) & (6 & x)) & -3) & (6 & x)) ^ (5 | x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 413,
+          "unique_evaluations": 331,
+          "cache_hits": 92,
+          "elapsed_seconds": 0.17734966300122323,
+          "size": 25,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "((11 & x) | (5 ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1944,
+          "unique_evaluations": 1486,
+          "cache_hits": 462,
+          "elapsed_seconds": 0.34192896300010034,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "((x - (5 & x)) - (-5 | x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1068,
+          "unique_evaluations": 667,
+          "cache_hits": 401,
+          "elapsed_seconds": 0.40961560499999905,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "(4 ^ x)",
+          "train_mae": 0.5,
+          "validation_mae": 0.5,
+          "test_mae": 0.5,
+          "proposals": 3000,
+          "unique_evaluations": 1478,
+          "cache_hits": 1522,
+          "elapsed_seconds": 0.8024275659990963,
+          "size": 3,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "bit_or_and",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "((3 & (x - 2)) ^ x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 924,
+          "unique_evaluations": 665,
+          "cache_hits": 264,
+          "elapsed_seconds": 0.16609161000087624,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(1 ^ (((6 | (x - -1)) & (-5 - x)) | x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1708,
+          "unique_evaluations": 1206,
+          "cache_hits": 507,
+          "elapsed_seconds": 0.340630324999438,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "((((-3 & x) & x) | (1 & (10 | (-6 ^ x)))) - (-2 | x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 883,
+          "unique_evaluations": 746,
+          "cache_hits": 145,
+          "elapsed_seconds": 0.36678389700136904,
+          "size": 17,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "((-(-1 + (3 | (-1 ^ (-3 - ((-8 + (7 | x)) | -1)))))) & ((-3 & x) ^ 3))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1297,
+          "unique_evaluations": 962,
+          "cache_hits": 338,
+          "elapsed_seconds": 0.19433776699952432,
+          "size": 22,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "(2 | x)",
+          "train_mae": 0.5,
+          "validation_mae": 0.5,
+          "test_mae": 0.5,
+          "proposals": 3000,
+          "unique_evaluations": 1681,
+          "cache_hits": 1319,
+          "elapsed_seconds": 0.9307919220009353,
+          "size": 3,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "(6 ^ (7 ^ (x | (3 ^ x))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2801,
+          "unique_evaluations": 1330,
+          "cache_hits": 1471,
+          "elapsed_seconds": 0.623720735000461,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_xor3",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(1 ^ (2 ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1708,
+          "unique_evaluations": 1230,
+          "cache_hits": 483,
+          "elapsed_seconds": 0.2963842900007876,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(2 ^ (1 ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 981,
+          "cache_hits": 340,
+          "elapsed_seconds": 0.22748987500017392,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "(-2 ^ (-3 ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 674,
+          "unique_evaluations": 549,
+          "cache_hits": 139,
+          "elapsed_seconds": 0.2630710329995054,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(0 | (3 ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 625,
+          "unique_evaluations": 430,
+          "cache_hits": 198,
+          "elapsed_seconds": 0.10425992700038478,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "(((-2 & x) & x) ^ 2)",
+          "train_mae": 0.5,
+          "validation_mae": 0.5,
+          "test_mae": 0.5,
+          "proposals": 3000,
+          "unique_evaluations": 1787,
+          "cache_hits": 1213,
+          "elapsed_seconds": 1.2065378810002585,
+          "size": 7,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "(-4 ^ (((-(-1 | x)) + (0 - x)) - 2))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 75,
+          "unique_evaluations": 64,
+          "cache_hits": 11,
+          "elapsed_seconds": 0.018402436000542366,
+          "size": 12,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "clamp_3",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "min(3, max(-3, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2100,
+          "unique_evaluations": 1629,
+          "cache_hits": 476,
+          "elapsed_seconds": 0.5425472719998652,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "max(-8, min(3, max(-3, x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 924,
+          "unique_evaluations": 718,
+          "cache_hits": 211,
+          "elapsed_seconds": 0.1778328460004559,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "max(max(min(-3, (x - min((2 + x), -3))), min(3, x)), min(3, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 420,
+          "unique_evaluations": 329,
+          "cache_hits": 102,
+          "elapsed_seconds": 0.11030885700165527,
+          "size": 17,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "max(-3, min(3, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 625,
+          "unique_evaluations": 440,
+          "cache_hits": 188,
+          "elapsed_seconds": 0.1559683679988666,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "min(max((5 + (-(5 + x))), 3), max(-3, min(((-1 + max(-6, x)) + x), 8)))",
+          "train_mae": 0.29411764705882354,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3000,
+          "unique_evaluations": 1718,
+          "cache_hits": 1282,
+          "elapsed_seconds": 1.2074031539996213,
+          "size": 20,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "max(-2, (x - max(1, ((1 + x) - 4))))",
+          "train_mae": 0.6470588235294118,
+          "validation_mae": 0.5,
+          "test_mae": 0.5,
+          "proposals": 3000,
+          "unique_evaluations": 1416,
+          "cache_hits": 1584,
+          "elapsed_seconds": 1.0360605429996212,
+          "size": 11,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "cubic_2x3_mx2_1",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((1 + (3 * x)) + ((((2 * x) * x) - (x - -4)) * x)) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2520,
+          "unique_evaluations": 2129,
+          "cache_hits": 397,
+          "elapsed_seconds": 0.7884565010008373,
+          "size": 19,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((((x + x) * x) - x) * x) - -1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3304,
+          "unique_evaluations": 2784,
+          "cache_hits": 526,
+          "elapsed_seconds": 0.8204203860004782,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "((((4 + ((-6 + (x - (-5 + (-1 * x)))) * x)) - 4) * x) + (2 - (-1 + ((x - -2) - x))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2027,
+          "unique_evaluations": 1615,
+          "cache_hits": 420,
+          "elapsed_seconds": 1.0637560479990498,
+          "size": 27,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "((-2 * (-26 * x)) - (((7 - (x - -8)) * x) * x))",
+          "train_mae": 101.0,
+          "validation_mae": 112.0,
+          "test_mae": 1222.4,
+          "proposals": 3304,
+          "unique_evaluations": 2684,
+          "cache_hits": 624,
+          "elapsed_seconds": 0.6031115629994019,
+          "size": 15,
+          "stopped_reason": "evaluation_limit"
+        },
+        "simulated_annealing": {
+          "program": "((-11 + ((3 + ((-((-40 + (-6 - x)) + ((2 - x) * x))) - 24)) * x)) + (12 + x))",
+          "train_mae": 30.0,
+          "validation_mae": 232.5,
+          "test_mae": 1506.5,
+          "proposals": 3304,
+          "unique_evaluations": 1549,
+          "cache_hits": 1755,
+          "elapsed_seconds": 1.5345081880004727,
+          "size": 24,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "(-1 * ((-2 * x) * (-((-x) * x))))",
+          "train_mae": 9.181818181818182,
+          "validation_mae": 55.5,
+          "test_mae": 139.5,
+          "proposals": 3304,
+          "unique_evaluations": 1618,
+          "cache_hits": 1686,
+          "elapsed_seconds": 1.0619786820006993,
+          "size": 11,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "cubic_mx3_2x",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "((x + x) + ((x * x) * (-x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1758,
+          "cache_hits": 376,
+          "elapsed_seconds": 0.42707666999922367,
+          "size": 10,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((((2 - (x - 3)) + x) - (x * x)) - 3) * x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1736,
+          "unique_evaluations": 1427,
+          "cache_hits": 315,
+          "elapsed_seconds": 0.35780114400040475,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "(-8 - (((2 + x) * ((-2 + x) * x)) + ((-2 + x) - (6 + (-(0 - (0 - x)))))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2192,
+          "unique_evaluations": 1837,
+          "cache_hits": 361,
+          "elapsed_seconds": 0.8284894409989647,
+          "size": 24,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(-1 + (-((-3 + (x * x)) * x)))",
+          "train_mae": 2.8181818181818183,
+          "validation_mae": 7.5,
+          "test_mae": 11.5,
+          "proposals": 3000,
+          "unique_evaluations": 2369,
+          "cache_hits": 632,
+          "elapsed_seconds": 0.6945571939995716,
+          "size": 10,
+          "stopped_reason": "evaluation_limit"
+        },
+        "simulated_annealing": {
+          "program": "((4 * ((-4 * x) - (x + x))) - (-x))",
+          "train_mae": 27.272727272727273,
+          "validation_mae": 240.0,
+          "test_mae": 1518.0,
+          "proposals": 3000,
+          "unique_evaluations": 1811,
+          "cache_hits": 1189,
+          "elapsed_seconds": 1.3106239979988459,
+          "size": 12,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "((-3 + x) * ((-x) * x))",
+          "train_mae": 30.0,
+          "validation_mae": 169.5,
+          "test_mae": 421.5,
+          "proposals": 3000,
+          "unique_evaluations": 1531,
+          "cache_hits": 1469,
+          "elapsed_seconds": 0.8566746600008628,
+          "size": 8,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "cubic_x3_m2x_4",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "((-2 - (-5 + (x - 1))) + (((x * x) * x) - x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2520,
+          "unique_evaluations": 2110,
+          "cache_hits": 416,
+          "elapsed_seconds": 0.5865652339998633,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((((-1 + (((-2 + x) * (3 + x)) - (-8 + x))) + -4) * x) + (x - -4))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 4480,
+          "unique_evaluations": 3666,
+          "cache_hits": 820,
+          "elapsed_seconds": 0.8274825700009387,
+          "size": 21,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "(((((((-1 + x) * x) + x) * x) + (-1 - (-4 + x))) + (x - (-6 + x))) - (5 + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1330,
+          "unique_evaluations": 1172,
+          "cache_hits": 170,
+          "elapsed_seconds": 0.49988818500060006,
+          "size": 25,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(((-1 * (0 - (x * x))) * x) - ((-4 + x) + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1919,
+          "unique_evaluations": 1407,
+          "cache_hits": 517,
+          "elapsed_seconds": 0.48671719999947527,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "((40 - (11 - ((-x) + (((-7 + (5 * x)) * 5) - x)))) - -10)",
+          "train_mae": 27.272727272727273,
+          "validation_mae": 240.0,
+          "test_mae": 1518.0,
+          "proposals": 4480,
+          "unique_evaluations": 2312,
+          "cache_hits": 2168,
+          "elapsed_seconds": 1.8910177959987777,
+          "size": 18,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "((x * x) * x)",
+          "train_mae": 6.181818181818182,
+          "validation_mae": 15.0,
+          "test_mae": 23.0,
+          "proposals": 4480,
+          "unique_evaluations": 2199,
+          "cache_hits": 2281,
+          "elapsed_seconds": 1.2992987979996542,
+          "size": 5,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "cubic_x3_m3x2_2",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(2 + (((1 + (x - 4)) * x) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3696,
+          "unique_evaluations": 3049,
+          "cache_hits": 653,
+          "elapsed_seconds": 0.9636375230002159,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((6 + x) + ((((-2 + x) * x) * x) + ((-4 - x) - (x * x))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2520,
+          "unique_evaluations": 2131,
+          "cache_hits": 395,
+          "elapsed_seconds": 0.6571751720002794,
+          "size": 19,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "((0 - ((((-4 - x) * x) + x) + ((7 * x) - x))) * x)",
+          "train_mae": 2.0,
+          "validation_mae": 2.0,
+          "test_mae": 2.0,
+          "proposals": 3696,
+          "unique_evaluations": 3183,
+          "cache_hits": 530,
+          "elapsed_seconds": 1.6004659779991925,
+          "size": 17,
+          "stopped_reason": "evaluation_limit"
+        },
+        "beam_mutation": {
+          "program": "(6 - (1 + ((-((-(0 - (1 + (x * x)))) * (5 - (0 - (x - 8))))) - (10 + (-8 - x)))))",
+          "train_mae": 2.0,
+          "validation_mae": 2.0,
+          "test_mae": 2.0,
+          "proposals": 3696,
+          "unique_evaluations": 2432,
+          "cache_hits": 1268,
+          "elapsed_seconds": 1.0118789179996384,
+          "size": 27,
+          "stopped_reason": "evaluation_limit"
+        },
+        "simulated_annealing": {
+          "program": "(2 + ((-9 + ((14 - ((-5 + ((x - -1) * x)) * -1)) - (4 * x))) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1085,
+          "unique_evaluations": 629,
+          "cache_hits": 456,
+          "elapsed_seconds": 0.4019739680006751,
+          "size": 21,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "((-(((x * x) * (3 - x)) - 4)) - -4)",
+          "train_mae": 6.0,
+          "validation_mae": 6.0,
+          "test_mae": 6.0,
+          "proposals": 3696,
+          "unique_evaluations": 1834,
+          "cache_hits": 1862,
+          "elapsed_seconds": 1.0832771619989217,
+          "size": 12,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "cubic_x3_x",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((((((x - -1) * x) - 6) - -6) * (x - 1)) + x) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2912,
+          "unique_evaluations": 2493,
+          "cache_hits": 425,
+          "elapsed_seconds": 0.6385656479997124,
+          "size": 17,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((x * x) * x) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 778,
+          "cache_hits": 180,
+          "elapsed_seconds": 0.14257101300063368,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "(((1 + ((-3 + x) * (3 + x))) * x) - (4 * (-2 - (x - (4 + (-7 - (-5 + x)))))))",
+          "train_mae": 2.727272727272727,
+          "validation_mae": 7.5,
+          "test_mae": 11.5,
+          "proposals": 3000,
+          "unique_evaluations": 2414,
+          "cache_hits": 595,
+          "elapsed_seconds": 1.4687373690012464,
+          "size": 25,
+          "stopped_reason": "evaluation_limit"
+        },
+        "beam_mutation": {
+          "program": "(((x * x) * x) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2591,
+          "unique_evaluations": 1975,
+          "cache_hits": 621,
+          "elapsed_seconds": 0.545564457999717,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "(x - (((((-16 + x) + -2) + (-(x - -3))) - 4) * x))",
+          "train_mae": 27.272727272727273,
+          "validation_mae": 240.0,
+          "test_mae": 1518.0,
+          "proposals": 3000,
+          "unique_evaluations": 1308,
+          "cache_hits": 1692,
+          "elapsed_seconds": 1.3894802150007308,
+          "size": 16,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "((x * x) * x)",
+          "train_mae": 2.727272727272727,
+          "validation_mae": 7.5,
+          "test_mae": 11.5,
+          "proposals": 3000,
+          "unique_evaluations": 1535,
+          "cache_hits": 1465,
+          "elapsed_seconds": 0.8747724209988519,
+          "size": 5,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "lin_2x_p1",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "((x + x) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 168,
+          "unique_evaluations": 125,
+          "cache_hits": 49,
+          "elapsed_seconds": 0.030462319999060128,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((x + x) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 416,
+          "cache_hits": 150,
+          "elapsed_seconds": 0.04778076199909265,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "((1 + x) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 738,
+          "unique_evaluations": 577,
+          "cache_hits": 170,
+          "elapsed_seconds": 0.18384159400011413,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(1 + (2 * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 575,
+          "unique_evaluations": 408,
+          "cache_hits": 172,
+          "elapsed_seconds": 0.1112482699991233,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "((((((-5 - (4 - x)) + (x - -8)) + 3) + 12) + 2) + -15)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 111,
+          "unique_evaluations": 78,
+          "cache_hits": 33,
+          "elapsed_seconds": 0.059518309999475605,
+          "size": 17,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "(2 * x)",
+          "train_mae": 1.0,
+          "validation_mae": 1.0,
+          "test_mae": 1.0,
+          "proposals": 3000,
+          "unique_evaluations": 1473,
+          "cache_hits": 1527,
+          "elapsed_seconds": 0.8073016460002691,
+          "size": 3,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "lin_5x_m2",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "((5 * x) - 2)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 751,
+          "cache_hits": 207,
+          "elapsed_seconds": 0.17795798299994203,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((((-3 + x) + (3 * x)) + 1) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 426,
+          "cache_hits": 140,
+          "elapsed_seconds": 0.08199754300039785,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "(((x + x) - ((6 - x) - x)) - (-4 - x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 619,
+          "unique_evaluations": 529,
+          "cache_hits": 100,
+          "elapsed_seconds": 0.17619089400068333,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "((-2 + x) - (-4 * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 600,
+          "unique_evaluations": 435,
+          "cache_hits": 169,
+          "elapsed_seconds": 0.09099134500138462,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "((-9 + (x - (((-3 * x) + x) + -2))) + ((x + x) - -5))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 41,
+          "unique_evaluations": 35,
+          "cache_hits": 6,
+          "elapsed_seconds": 0.0073433519992249785,
+          "size": 17,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "(3 + (-(-5 * ((x - -2) - 3))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1151,
+          "unique_evaluations": 616,
+          "cache_hits": 535,
+          "elapsed_seconds": 0.3294071679993067,
+          "size": 10,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_m2x_m5",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(-5 - (x + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 408,
+          "cache_hits": 158,
+          "elapsed_seconds": 0.06122468200010189,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(6 + (-11 - (x + x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 168,
+          "unique_evaluations": 126,
+          "cache_hits": 48,
+          "elapsed_seconds": 0.011556704999748035,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "(1 - (6 + (2 * x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 425,
+          "unique_evaluations": 329,
+          "cache_hits": 106,
+          "elapsed_seconds": 0.0912810099998751,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(-5 - (x + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1297,
+          "unique_evaluations": 921,
+          "cache_hits": 379,
+          "elapsed_seconds": 0.2653472000001784,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "((-8 - (-3 + x)) - x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 39,
+          "unique_evaluations": 34,
+          "cache_hits": 5,
+          "elapsed_seconds": 0.00245515099959448,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "((-2 * x) - 5)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1713,
+          "unique_evaluations": 878,
+          "cache_hits": 835,
+          "elapsed_seconds": 0.4324843600006716,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_m3x_p4",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(4 + (-3 * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1074,
+          "cache_hits": 276,
+          "elapsed_seconds": 0.25608675200055586,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((-3 * x) - -4)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 402,
+          "cache_hits": 164,
+          "elapsed_seconds": 0.07591872699958913,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "(((((6 - (x - (-8 - x))) + x) + (-x)) - -6) - x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 565,
+          "unique_evaluations": 475,
+          "cache_hits": 105,
+          "elapsed_seconds": 0.12458396399961202,
+          "size": 16,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(5 + (1 - ((-4 + (3 * x)) + 6)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1919,
+          "unique_evaluations": 1472,
+          "cache_hits": 452,
+          "elapsed_seconds": 0.27916084799835517,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "(4 + ((2 - ((2 * x) + (15 - x))) - (-7 + ((((2 * x) + x) + 1) - (7 + x)))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 47,
+          "unique_evaluations": 41,
+          "cache_hits": 6,
+          "elapsed_seconds": 0.00659812899903045,
+          "size": 25,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "((6 + (-5 - x)) * 3)",
+          "train_mae": 1.0,
+          "validation_mae": 1.0,
+          "test_mae": 1.0,
+          "proposals": 3000,
+          "unique_evaluations": 1482,
+          "cache_hits": 1518,
+          "elapsed_seconds": 0.8976788270010729,
+          "size": 7,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "lin_x_m7",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "((-8 + x) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 168,
+          "unique_evaluations": 110,
+          "cache_hits": 64,
+          "elapsed_seconds": 0.02502468599959684,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(-7 + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 168,
+          "unique_evaluations": 125,
+          "cache_hits": 49,
+          "elapsed_seconds": 0.011197363000974292,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "(-7 + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 102,
+          "unique_evaluations": 90,
+          "cache_hits": 23,
+          "elapsed_seconds": 0.017784433999622706,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(-4 - (3 - x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 600,
+          "unique_evaluations": 448,
+          "cache_hits": 156,
+          "elapsed_seconds": 0.0824132939997071,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "(((1 + x) + 5) + -13)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 199,
+          "unique_evaluations": 165,
+          "cache_hits": 34,
+          "elapsed_seconds": 0.028643648000070243,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "(x - 7)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 234,
+          "unique_evaluations": 155,
+          "cache_hits": 79,
+          "elapsed_seconds": 0.09776252200026647,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "max_two_lines",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "max(((1 + max(0, x)) + x), (3 - x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 760,
+          "cache_hits": 198,
+          "elapsed_seconds": 0.47607044100004714,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "max((3 + (0 - x)), (((x - -3) + x) - 2))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3696,
+          "unique_evaluations": 3046,
+          "cache_hits": 656,
+          "elapsed_seconds": 1.1333810150008503,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "max((max((min(1, x) + x), (-x)) + max(3, x)), 0)",
+          "train_mae": 0.17647058823529413,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3696,
+          "unique_evaluations": 2830,
+          "cache_hits": 880,
+          "elapsed_seconds": 2.5415615450001496,
+          "size": 14,
+          "stopped_reason": "evaluation_limit"
+        },
+        "beam_mutation": {
+          "program": "(-min(min(((1 - x) - (2 + x)), (x - ((3 + x) - max(-8, x)))), (x - 2)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.5,
+          "test_mae": 0.5,
+          "proposals": 3696,
+          "unique_evaluations": 2773,
+          "cache_hits": 929,
+          "elapsed_seconds": 0.9117080470005021,
+          "size": 22,
+          "stopped_reason": "evaluation_limit"
+        },
+        "simulated_annealing": {
+          "program": "max(max((-6 + max(((x - -7) + x), -3)), -8), (2 - x))",
+          "train_mae": 0.5294117647058824,
+          "validation_mae": 0.5,
+          "test_mae": 0.5,
+          "proposals": 3696,
+          "unique_evaluations": 1880,
+          "cache_hits": 1816,
+          "elapsed_seconds": 1.5040006559993344,
+          "size": 15,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "(max((1 + (3 * max(0, x))), -3) - x)",
+          "train_mae": 1.0588235294117647,
+          "validation_mae": 1.0,
+          "test_mae": 1.0,
+          "proposals": 3696,
+          "unique_evaluations": 1759,
+          "cache_hits": 1937,
+          "elapsed_seconds": 1.2121239330008393,
+          "size": 11,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "max_x_0",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "max(0, x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 140,
+          "unique_evaluations": 94,
+          "cache_hits": 51,
+          "elapsed_seconds": 0.008896042998458142,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "max(0, x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 140,
+          "unique_evaluations": 97,
+          "cache_hits": 48,
+          "elapsed_seconds": 0.008240444998591556,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "max(max(0, min(18, max(-5, x))), x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 95,
+          "unique_evaluations": 80,
+          "cache_hits": 33,
+          "elapsed_seconds": 0.060702292999849305,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "max(0, x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1222,
+          "unique_evaluations": 827,
+          "cache_hits": 401,
+          "elapsed_seconds": 0.19385558999965724,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "max(0, x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 555,
+          "unique_evaluations": 361,
+          "cache_hits": 194,
+          "elapsed_seconds": 0.16202600399992662,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "max(0, max(-1, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 395,
+          "unique_evaluations": 217,
+          "cache_hits": 178,
+          "elapsed_seconds": 0.1177449090009759,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "maxmin_gap",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(1 + (1 - min((min(2, (4 - x)) - 4), x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1316,
+          "unique_evaluations": 1031,
+          "cache_hits": 290,
+          "elapsed_seconds": 0.23534776199994667,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(max(max(-1, min((-1 + x), x)), (-1 - min(-2, x))) - -3)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3276,
+          "unique_evaluations": 2618,
+          "cache_hits": 663,
+          "elapsed_seconds": 1.090476129000308,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "max((min(2, x) + x), max((-8 + (9 - (-1 + x))), 4))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1151,
+          "unique_evaluations": 925,
+          "cache_hits": 239,
+          "elapsed_seconds": 0.6755322930002876,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(max(2, max(-1, x)) - min(-2, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3260,
+          "unique_evaluations": 2439,
+          "cache_hits": 825,
+          "elapsed_seconds": 0.7535636939992401,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "max(max(1, max(-7, max(4, max(max(((-2 + x) + 4), (-(-2 + x))), min(-4, min(3, (-x))))))), x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3276,
+          "unique_evaluations": 1779,
+          "cache_hits": 1497,
+          "elapsed_seconds": 1.4967321139993146,
+          "size": 25,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "(-(3 - (max((-3 - x), x) - -7)))",
+          "train_mae": 1.3529411764705883,
+          "validation_mae": 1.5,
+          "test_mae": 1.5,
+          "proposals": 3276,
+          "unique_evaluations": 1567,
+          "cache_hits": 1709,
+          "elapsed_seconds": 1.1657753999988927,
+          "size": 10,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "quad_2x2_m3x_2",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((((x - (2 - x)) * x) + (-2 - x)) + 3) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1747,
+          "cache_hits": 387,
+          "elapsed_seconds": 0.5517496329994174,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((((-5 + x) + x) * x) + (x - (1 - x))) + 3)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1736,
+          "unique_evaluations": 1398,
+          "cache_hits": 344,
+          "elapsed_seconds": 0.3463961079996807,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "(0 - ((-4 + (0 - ((((-4 + x) + x) * x) + x))) - -2))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1198,
+          "unique_evaluations": 1008,
+          "cache_hits": 202,
+          "elapsed_seconds": 0.454397257999517,
+          "size": 17,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(((((((x - 4) - (-2 - x)) * x) + (-4 - (-8 + x))) + -3) + 7) + -6)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2977,
+          "unique_evaluations": 2365,
+          "cache_hits": 615,
+          "elapsed_seconds": 0.6040086809989589,
+          "size": 21,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "(x - (3 + (((x + x) + (x - (5 - x))) - ((x + x) * x))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 43,
+          "unique_evaluations": 40,
+          "cache_hits": 3,
+          "elapsed_seconds": 0.0075837389995285776,
+          "size": 19,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "(((((-5 + x) + x) + 1) * x) + x)",
+          "train_mae": 2.0,
+          "validation_mae": 2.0,
+          "test_mae": 2.0,
+          "proposals": 3000,
+          "unique_evaluations": 1473,
+          "cache_hits": 1527,
+          "elapsed_seconds": 1.0006964839994907,
+          "size": 11,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "quad_3x2_2x_1",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((((2 + x) - (-2 * x)) * x) - ((-x) - -4)) - (-5 + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1813,
+          "cache_hits": 321,
+          "elapsed_seconds": 0.47602481600006286,
+          "size": 18,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((1 + x) + ((3 * x) * x)) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2128,
+          "unique_evaluations": 1746,
+          "cache_hits": 388,
+          "elapsed_seconds": 0.49467010799889977,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "((((-3 + x) + ((3 - x) + x)) + (((x + x) - (0 - x)) * x)) + (1 + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1202,
+          "unique_evaluations": 999,
+          "cache_hits": 212,
+          "elapsed_seconds": 0.4307835420004267,
+          "size": 23,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "((((2 * x) * x) + (x * x)) + (x + x))",
+          "train_mae": 1.0,
+          "validation_mae": 1.0,
+          "test_mae": 1.0,
+          "proposals": 3000,
+          "unique_evaluations": 2437,
+          "cache_hits": 567,
+          "elapsed_seconds": 0.5007355930010817,
+          "size": 13,
+          "stopped_reason": "evaluation_limit"
+        },
+        "simulated_annealing": {
+          "program": "((-36 + (54 - (((10 * x) - ((-7 + ((12 + x) * x)) + ((x + x) * x))) - -8))) - 2)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2637,
+          "unique_evaluations": 1032,
+          "cache_hits": 1605,
+          "elapsed_seconds": 0.9914575929997227,
+          "size": 25,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "(((7 + ((3 * x) * x)) - (5 - x)) - 4)",
+          "train_mae": 3.923076923076923,
+          "validation_mae": 9.0,
+          "test_mae": 16.5,
+          "proposals": 3000,
+          "unique_evaluations": 1549,
+          "cache_hits": 1451,
+          "elapsed_seconds": 0.8933807659996091,
+          "size": 13,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "quad_mx2_4x_3",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(((((3 - x) * x) + x) + 1) - -2)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 776,
+          "cache_hits": 182,
+          "elapsed_seconds": 0.1324555130013323,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((8 + ((4 - x) * x)) - 5)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1344,
+          "unique_evaluations": 1034,
+          "cache_hits": 316,
+          "elapsed_seconds": 0.19449042599990207,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "((-4 + (((((-((1 + x) + -4)) * x) - 1) - -6) - (-x))) + 2)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1092,
+          "unique_evaluations": 914,
+          "cache_hits": 194,
+          "elapsed_seconds": 0.38893004600140557,
+          "size": 19,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "((3 - (-4 * x)) - (x * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1944,
+          "unique_evaluations": 1484,
+          "cache_hits": 464,
+          "elapsed_seconds": 0.316269230999751,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "((((4 + (((-1 + x) * (4 - x)) - x)) + ((6 - (-2 - x)) - (x - 1))) + 6) + -12)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 197,
+          "unique_evaluations": 127,
+          "cache_hits": 70,
+          "elapsed_seconds": 0.09181825000086974,
+          "size": 25,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "((-(-5 + x)) * x)",
+          "train_mae": 3.923076923076923,
+          "validation_mae": 9.0,
+          "test_mae": 16.5,
+          "proposals": 3000,
+          "unique_evaluations": 1518,
+          "cache_hits": 1482,
+          "elapsed_seconds": 0.8181765360004647,
+          "size": 6,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "quad_x2_m4",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "((x * x) - 4)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 418,
+          "cache_hits": 148,
+          "elapsed_seconds": 0.08343380900078046,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(-4 + (x * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 708,
+          "cache_hits": 250,
+          "elapsed_seconds": 0.16394673099966894,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "(3 - ((1 + (-((x * x) + ((((1 + x) + -2) + (2 - x)) - -1)))) - -8))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 882,
+          "unique_evaluations": 728,
+          "cache_hits": 167,
+          "elapsed_seconds": 0.23727972000051523,
+          "size": 22,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "((((x * x) + x) - -2) - (6 + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1247,
+          "unique_evaluations": 940,
+          "cache_hits": 312,
+          "elapsed_seconds": 0.17668454499835207,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "(7 + ((-13 - (((8 + (((0 - x) * x) - (2 + x))) + -5) + (2 + x))) - -5))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 596,
+          "unique_evaluations": 366,
+          "cache_hits": 230,
+          "elapsed_seconds": 0.18310651300089376,
+          "size": 23,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "(x * x)",
+          "train_mae": 4.0,
+          "validation_mae": 4.0,
+          "test_mae": 4.0,
+          "proposals": 3000,
+          "unique_evaluations": 1552,
+          "cache_hits": 1448,
+          "elapsed_seconds": 0.832690356999592,
+          "size": 3,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "quad_x2_x_1",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "((x * x) + (x - -1))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 952,
+          "unique_evaluations": 732,
+          "cache_hits": 226,
+          "elapsed_seconds": 0.16414339399852906,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(1 + ((1 + x) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 560,
+          "unique_evaluations": 438,
+          "cache_hits": 128,
+          "elapsed_seconds": 0.08627925799919467,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "((x * x) + (x - (x - ((5 + (x - 3)) + -1))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1028,
+          "unique_evaluations": 863,
+          "cache_hits": 179,
+          "elapsed_seconds": 0.3191744560008374,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "((x * x) + x)",
+          "train_mae": 1.0,
+          "validation_mae": 1.0,
+          "test_mae": 1.0,
+          "proposals": 3000,
+          "unique_evaluations": 2356,
+          "cache_hits": 651,
+          "elapsed_seconds": 0.5823055069995462,
+          "size": 5,
+          "stopped_reason": "evaluation_limit"
+        },
+        "simulated_annealing": {
+          "program": "((-5 + ((((3 + (-(6 - x))) + 18) + (-1 * (-12 - (x * x)))) - 14)) + -7)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 328,
+          "unique_evaluations": 185,
+          "cache_hits": 143,
+          "elapsed_seconds": 0.1837695279991749,
+          "size": 22,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "(1 + ((x - -2) * x))",
+          "train_mae": 3.230769230769231,
+          "validation_mae": 9.0,
+          "test_mae": 16.5,
+          "proposals": 3000,
+          "unique_evaluations": 1511,
+          "cache_hits": 1489,
+          "elapsed_seconds": 0.9009949520004739,
+          "size": 7,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "quartic_2x4_mx2_3",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(12 + (((((x - (x - -5)) - -71) * x) * x) - ((((-13 + x) + (-4 - x)) + (-6 + (x * x))) * -13)))",
+          "train_mae": 245.55555555555554,
+          "validation_mae": 587.0,
+          "test_mae": 37364.6,
+          "proposals": 9184,
+          "unique_evaluations": 5442,
+          "cache_hits": 3748,
+          "elapsed_seconds": 4.39480716000071,
+          "size": 29,
+          "stopped_reason": "generation_limit"
+        },
+        "vhss_prng": {
+          "program": "(((((((-1 + x) + 4) + (x - (-7 * x))) * x) + (4 - ((5 + x) * (8 - x)))) * 8) - 1)",
+          "train_mae": 250.22222222222223,
+          "validation_mae": 578.5,
+          "test_mae": 37226.1,
+          "proposals": 9184,
+          "unique_evaluations": 6468,
+          "cache_hits": 2722,
+          "elapsed_seconds": 4.47416631699889,
+          "size": 27,
+          "stopped_reason": "generation_limit"
+        },
+        "standard_gp": {
+          "program": "(((4 + x) * -44) + (-(101 + (((((-7 + (-41 * x)) + 4) + ((-39 * x) + x)) + -39) * x))))",
+          "train_mae": 248.0,
+          "validation_mae": 587.0,
+          "test_mae": 37354.6,
+          "proposals": 9184,
+          "unique_evaluations": 6308,
+          "cache_hits": 2885,
+          "elapsed_seconds": 5.780888348999724,
+          "size": 26,
+          "stopped_reason": "evaluation_limit"
+        },
+        "beam_mutation": {
+          "program": "((((-8 - x) + (72 - x)) + ((9 + (x - (-3 - x))) * (x - 5))) * ((x * x) - 2))",
+          "train_mae": 6.555555555555555,
+          "validation_mae": 31.5,
+          "test_mae": 129.5,
+          "proposals": 9184,
+          "unique_evaluations": 7461,
+          "cache_hits": 1726,
+          "elapsed_seconds": 1.965599379998821,
+          "size": 25,
+          "stopped_reason": "evaluation_limit"
+        },
+        "simulated_annealing": {
+          "program": "((-1 + (((((((-6 + x) + x) + -13) * 2) + (((33 + (x * x)) * x) - -38)) + (x + x)) * x)) - 140)",
+          "train_mae": 122.66666666666667,
+          "validation_mae": 292.5,
+          "test_mae": 18681.3,
+          "proposals": 9184,
+          "unique_evaluations": 2304,
+          "cache_hits": 6880,
+          "elapsed_seconds": 3.1169670409999526,
+          "size": 29,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "((((-3 * x) + (5 * (-6 * x))) * -2) * x)",
+          "train_mae": 287.0,
+          "validation_mae": 852.5,
+          "test_mae": 38904.1,
+          "proposals": 9184,
+          "unique_evaluations": 4193,
+          "cache_hits": 4991,
+          "elapsed_seconds": 1.7954759650001506,
+          "size": 13,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "quartic_square",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(4 + (((-(4 + ((-x) * x))) * x) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 4088,
+          "unique_evaluations": 3304,
+          "cache_hits": 790,
+          "elapsed_seconds": 1.4294749369983037,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "((((x * x) * x) * x) - (-5 + (((1 + x) + (((5 * x) - x) * x)) - x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2912,
+          "unique_evaluations": 2493,
+          "cache_hits": 425,
+          "elapsed_seconds": 1.16320309799994,
+          "size": 23,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "standard_gp": {
+          "program": "(((((5 * x) + x) * 6) * x) - ((((x + x) + (108 - ((x - 8) - 10))) + (7 - x)) - -7))",
+          "train_mae": 122.66666666666667,
+          "validation_mae": 292.5,
+          "test_mae": 18681.3,
+          "proposals": 4088,
+          "unique_evaluations": 3156,
+          "cache_hits": 944,
+          "elapsed_seconds": 2.039705190998575,
+          "size": 27,
+          "stopped_reason": "evaluation_limit"
+        },
+        "beam_mutation": {
+          "program": "((-6 + (((((2 + x) + 2) + (7 * x)) + (-(-11 - x))) * (-6 + (4 * x)))) + -10)",
+          "train_mae": 134.0,
+          "validation_mae": 293.5,
+          "test_mae": 18647.3,
+          "proposals": 4088,
+          "unique_evaluations": 3208,
+          "cache_hits": 884,
+          "elapsed_seconds": 1.5694212210000842,
+          "size": 24,
+          "stopped_reason": "evaluation_limit"
+        },
+        "simulated_annealing": {
+          "program": "((((((1 + (((x + x) * 4) * (5 * x))) + -34) + -64) + (-54 + ((-4 * x) * x))) + -3) - -14)",
+          "train_mae": 122.66666666666667,
+          "validation_mae": 292.5,
+          "test_mae": 18681.3,
+          "proposals": 4088,
+          "unique_evaluations": 1492,
+          "cache_hits": 2596,
+          "elapsed_seconds": 2.498292328000389,
+          "size": 27,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "(4 * (8 * (x * x)))",
+          "train_mae": 158.22222222222223,
+          "validation_mae": 322.5,
+          "test_mae": 19103.3,
+          "proposals": 4088,
+          "unique_evaluations": 1956,
+          "cache_hits": 2132,
+          "elapsed_seconds": 1.1820330070004275,
+          "size": 7,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "quartic_x4_x2_1",
+      "seed": 0,
+      "methods": {
+        "vhss_hash": {
+          "program": "(1 + (((-1 + (x - -1)) + (((-1 * x) * (0 - x)) * x)) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 4088,
+          "unique_evaluations": 3463,
+          "cache_hits": 631,
+          "elapsed_seconds": 1.288211783999941,
+          "size": 19,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "vhss_prng": {
+          "program": "(((((((-5 + x) + (7 * x)) + -6) + -4) * 5) * (x - -2)) + (7 - (-(((2 + x) + -8) * x))))",
+          "train_mae": 123.11111111111111,
+          "validation_mae": 295.5,
+          "test_mae": 18681.3,
+          "proposals": 9184,
+          "unique_evaluations": 6084,
+          "cache_hits": 3106,
+          "elapsed_seconds": 4.594548325998403,
+          "size": 28,
+          "stopped_reason": "generation_limit"
+        },
+        "standard_gp": {
+          "program": "((1 + ((1 + ((((4 + (x * x)) * x) - (1 + x)) - (((x - 1) + x) + 2))) * x)) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1472,
+          "unique_evaluations": 1210,
+          "cache_hits": 275,
+          "elapsed_seconds": 0.7956458090011438,
+          "size": 27,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(((-2 - ((-1 - (x * x)) * x)) * x) - (1 + (-2 - (2 * x))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 7320,
+          "unique_evaluations": 6164,
+          "cache_hits": 1160,
+          "elapsed_seconds": 1.98110187400016,
+          "size": 19,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "(-17 + (((((13 * x) + ((x - 16) - 4)) + -12) + (14 + (((x - 4) + x) * 3))) * ((3 + x) + x)))",
+          "train_mae": 128.44444444444446,
+          "validation_mae": 299.0,
+          "test_mae": 18785.8,
+          "proposals": 9184,
+          "unique_evaluations": 1886,
+          "cache_hits": 7298,
+          "elapsed_seconds": 5.387433930000043,
+          "size": 29,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "(6 * (-1 * ((-(6 * x)) * x)))",
+          "train_mae": 153.88888888888889,
+          "validation_mae": 362.0,
+          "test_mae": 19240.8,
+          "proposals": 9184,
+          "unique_evaluations": 4113,
+          "cache_hits": 5071,
+          "elapsed_seconds": 2.5067127679994883,
+          "size": 10,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    }
+  ]
+}

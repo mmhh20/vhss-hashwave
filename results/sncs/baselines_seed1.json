@@ -1,0 +1,1735 @@
+{
+  "configuration": {
+    "tasks": 30,
+    "seeds": 1,
+    "seed_start": 1,
+    "workers": 2,
+    "requested_evaluations": 3000,
+    "methods": [
+      "standard_gp",
+      "beam_mutation",
+      "simulated_annealing",
+      "random_program"
+    ]
+  },
+  "summary": {
+    "methods": {
+      "beam_mutation": {
+        "runs": 30,
+        "test_exact": 21,
+        "test_exact_rate": 0.7,
+        "median_test_mae": 0.0,
+        "median_proposals": 2603.5,
+        "median_elapsed_seconds": 0.29232968050018826,
+        "median_size": 8.0
+      },
+      "random_program": {
+        "runs": 30,
+        "test_exact": 7,
+        "test_exact_rate": 0.23333333333333334,
+        "median_test_mae": 1.5,
+        "median_proposals": 3000.0,
+        "median_elapsed_seconds": 0.5583274615009941,
+        "median_size": 6.0
+      },
+      "simulated_annealing": {
+        "runs": 30,
+        "test_exact": 18,
+        "test_exact_rate": 0.6,
+        "median_test_mae": 0.0,
+        "median_proposals": 1602.5,
+        "median_elapsed_seconds": 0.3194897734992992,
+        "median_size": 22.5
+      },
+      "standard_gp": {
+        "runs": 30,
+        "test_exact": 27,
+        "test_exact_rate": 0.9,
+        "median_test_mae": 0.0,
+        "median_proposals": 1072.0,
+        "median_elapsed_seconds": 0.25330187950021354,
+        "median_size": 14.5
+      }
+    },
+    "families": {
+      "abs": {
+        "beam_mutation": 0.6666666666666666,
+        "random_program": 0.6666666666666666,
+        "simulated_annealing": 1.0,
+        "standard_gp": 1.0
+      },
+      "bit": {
+        "beam_mutation": 1.0,
+        "random_program": 0.4,
+        "simulated_annealing": 0.4,
+        "standard_gp": 1.0
+      },
+      "clamp": {
+        "beam_mutation": 1.0,
+        "random_program": 0.0,
+        "simulated_annealing": 1.0,
+        "standard_gp": 1.0
+      },
+      "cubic": {
+        "beam_mutation": 0.4,
+        "random_program": 0.0,
+        "simulated_annealing": 0.0,
+        "standard_gp": 0.8
+      },
+      "lin": {
+        "beam_mutation": 1.0,
+        "random_program": 0.4,
+        "simulated_annealing": 1.0,
+        "standard_gp": 1.0
+      },
+      "max": {
+        "beam_mutation": 0.5,
+        "random_program": 0.5,
+        "simulated_annealing": 1.0,
+        "standard_gp": 1.0
+      },
+      "maxmin": {
+        "beam_mutation": 1.0,
+        "random_program": 0.0,
+        "simulated_annealing": 0.0,
+        "standard_gp": 1.0
+      },
+      "quad": {
+        "beam_mutation": 0.8,
+        "random_program": 0.0,
+        "simulated_annealing": 1.0,
+        "standard_gp": 1.0
+      },
+      "quartic": {
+        "beam_mutation": 0.0,
+        "random_program": 0.0,
+        "simulated_annealing": 0.0,
+        "standard_gp": 0.3333333333333333
+      }
+    },
+    "pairwise_vs_vhss_hash": {}
+  },
+  "elapsed_seconds": 23.670419635000144,
+  "runs": [
+    {
+      "task": "abs_2x_m3_p1",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "(abs((((5 + (x - 6)) + x) + -2)) + 1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1534,
+          "unique_evaluations": 1300,
+          "cache_hits": 247,
+          "elapsed_seconds": 0.24581488799958606,
+          "size": 12,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "abs((-3 + (x - (1 - x))))",
+          "train_mae": 0.8,
+          "validation_mae": 1.0,
+          "test_mae": 1.0,
+          "proposals": 3000,
+          "unique_evaluations": 2308,
+          "cache_hits": 696,
+          "elapsed_seconds": 0.2964548300005845,
+          "size": 8,
+          "stopped_reason": "evaluation_limit"
+        },
+        "simulated_annealing": {
+          "program": "(abs((((2 + (8 - (-3 + x))) + 5) - (6 + (x - -9)))) - -1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1270,
+          "unique_evaluations": 946,
+          "cache_hits": 324,
+          "elapsed_seconds": 0.16687558599915064,
+          "size": 18,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "abs((2 * x))",
+          "train_mae": 2.933333333333333,
+          "validation_mae": 3.0,
+          "test_mae": 3.0,
+          "proposals": 3000,
+          "unique_evaluations": 1506,
+          "cache_hits": 1494,
+          "elapsed_seconds": 0.5485958970002685,
+          "size": 4,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "abs_double",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "abs((-2 * x))",
+          "train_mae": 0.5333333333333333,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3000,
+          "unique_evaluations": 2358,
+          "cache_hits": 658,
+          "elapsed_seconds": 0.43746652000118047,
+          "size": 4,
+          "stopped_reason": "evaluation_limit"
+        },
+        "beam_mutation": {
+          "program": "abs((x + x))",
+          "train_mae": 0.5333333333333333,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3000,
+          "unique_evaluations": 2316,
+          "cache_hits": 689,
+          "elapsed_seconds": 0.28820453099979204,
+          "size": 4,
+          "stopped_reason": "evaluation_limit"
+        },
+        "simulated_annealing": {
+          "program": "((abs(((abs(x) + ((4 + x) + (6 + (x - 3)))) + -7)) * (x - (-1 + x))) - x)",
+          "train_mae": 0.5333333333333333,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3000,
+          "unique_evaluations": 1509,
+          "cache_hits": 1491,
+          "elapsed_seconds": 0.6296425040000031,
+          "size": 23,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "abs((x + x))",
+          "train_mae": 0.5333333333333333,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3000,
+          "unique_evaluations": 1564,
+          "cache_hits": 1436,
+          "elapsed_seconds": 0.5825857929994527,
+          "size": 4,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "abs_x",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "abs(x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 103,
+          "unique_evaluations": 91,
+          "cache_hits": 21,
+          "elapsed_seconds": 0.01773835499989218,
+          "size": 2,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "abs(x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1272,
+          "unique_evaluations": 849,
+          "cache_hits": 427,
+          "elapsed_seconds": 0.11124758299956738,
+          "size": 2,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "abs((-x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 38,
+          "unique_evaluations": 33,
+          "cache_hits": 5,
+          "elapsed_seconds": 0.00351287600096839,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "abs(x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 26,
+          "unique_evaluations": 24,
+          "cache_hits": 2,
+          "elapsed_seconds": 0.00509979900016333,
+          "size": 2,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_and_or",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "((3 & x) + ((((0 & x) + x) & x) | ((((-1 - x) - x) + x) & 1)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 466,
+          "unique_evaluations": 386,
+          "cache_hits": 93,
+          "elapsed_seconds": 0.1317346189989621,
+          "size": 21,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "((3 & (1 | x)) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1247,
+          "unique_evaluations": 886,
+          "cache_hits": 366,
+          "elapsed_seconds": 0.152657704999001,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "((2 & (((-5 | (-1 - x)) - -1) | x)) + (1 ^ ((1 + x) | 1)))",
+          "train_mae": 0.5,
+          "validation_mae": 0.5,
+          "test_mae": 0.5,
+          "proposals": 3000,
+          "unique_evaluations": 1796,
+          "cache_hits": 1204,
+          "elapsed_seconds": 0.81483221200142,
+          "size": 19,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "(2 + x)",
+          "train_mae": 1.0,
+          "validation_mae": 1.0,
+          "test_mae": 1.0,
+          "proposals": 3000,
+          "unique_evaluations": 1379,
+          "cache_hits": 1621,
+          "elapsed_seconds": 0.6748174109998217,
+          "size": 3,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "bit_mask",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "((3 | x) & (4 ^ (-1 ^ x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2198,
+          "unique_evaluations": 1868,
+          "cache_hits": 346,
+          "elapsed_seconds": 0.7356814720005787,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "((((-8 & x) + 8) + -5) ^ x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1172,
+          "unique_evaluations": 805,
+          "cache_hits": 375,
+          "elapsed_seconds": 0.1492692560004798,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "((7 & (-4 ^ x)) ^ 7)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 286,
+          "unique_evaluations": 184,
+          "cache_hits": 102,
+          "elapsed_seconds": 0.07393471300019883,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "((7 & x) ^ 3)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1536,
+          "unique_evaluations": 747,
+          "cache_hits": 789,
+          "elapsed_seconds": 0.3772446689999924,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "bit_mix5",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "(((-9 - x) & (1 ^ x)) | (4 ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 920,
+          "unique_evaluations": 788,
+          "cache_hits": 143,
+          "elapsed_seconds": 0.2547002289993543,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(1 | (5 ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2974,
+          "unique_evaluations": 2292,
+          "cache_hits": 684,
+          "elapsed_seconds": 0.37994293100018695,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "(-9 + ((5 + ((4 & ((5 & ((-2 & x) | -5)) - 3)) | (x - (4 & x)))) - -4))",
+          "train_mae": 0.5,
+          "validation_mae": 0.5,
+          "test_mae": 0.5,
+          "proposals": 3000,
+          "unique_evaluations": 1626,
+          "cache_hits": 1374,
+          "elapsed_seconds": 0.9403919199994561,
+          "size": 23,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "(4 ^ x)",
+          "train_mae": 0.5,
+          "validation_mae": 0.5,
+          "test_mae": 0.5,
+          "proposals": 3000,
+          "unique_evaluations": 1400,
+          "cache_hits": 1600,
+          "elapsed_seconds": 0.6753032579999854,
+          "size": 3,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "bit_or_and",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "(((-1 & x) | 2) - (1 & x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1037,
+          "unique_evaluations": 869,
+          "cache_hits": 179,
+          "elapsed_seconds": 0.2519035300010728,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "((-5 + (-1 ^ (((-5 & x) | -8) - x))) | 2)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1272,
+          "unique_evaluations": 933,
+          "cache_hits": 343,
+          "elapsed_seconds": 0.23132845899999666,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "(2 | (2 | x))",
+          "train_mae": 0.5,
+          "validation_mae": 0.5,
+          "test_mae": 0.5,
+          "proposals": 3000,
+          "unique_evaluations": 1831,
+          "cache_hits": 1169,
+          "elapsed_seconds": 0.7735174179997557,
+          "size": 5,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "(2 | x)",
+          "train_mae": 0.5,
+          "validation_mae": 0.5,
+          "test_mae": 0.5,
+          "proposals": 3000,
+          "unique_evaluations": 1393,
+          "cache_hits": 1607,
+          "elapsed_seconds": 0.7158180330006871,
+          "size": 3,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "bit_xor3",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "(((0 & x) | 3) ^ x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 204,
+          "unique_evaluations": 172,
+          "cache_hits": 45,
+          "elapsed_seconds": 0.04075026999998954,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "((5 & (1 ^ x)) | (3 ^ x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2616,
+          "unique_evaluations": 2015,
+          "cache_hits": 605,
+          "elapsed_seconds": 0.32091732300068543,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "(-1 & ((3 ^ x) - (-1 + (-((((-7 + (11 ^ x)) + x) | -2) - (-1 | x))))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1935,
+          "unique_evaluations": 1231,
+          "cache_hits": 704,
+          "elapsed_seconds": 0.47210396099944774,
+          "size": 22,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "(3 ^ x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 271,
+          "unique_evaluations": 159,
+          "cache_hits": 112,
+          "elapsed_seconds": 0.06289212399860844,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "clamp_3",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "max(-4, max(min((1 + max(-4, (x - max(3, x)))), -1), min(3, max(min(-8, x), x))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1499,
+          "unique_evaluations": 1251,
+          "cache_hits": 265,
+          "elapsed_seconds": 0.44935745900147595,
+          "size": 21,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "min(3, max(-3, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2591,
+          "unique_evaluations": 1978,
+          "cache_hits": 618,
+          "elapsed_seconds": 0.3043982870003674,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "max(max((-1 + min(-9, min((-1 + ((-min(-5, x)) - x)), -8))), -3), min(3, max(-3, x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 663,
+          "unique_evaluations": 383,
+          "cache_hits": 280,
+          "elapsed_seconds": 0.16627215699918452,
+          "size": 22,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "max(-4, (0 - (-min(4, min(5, x)))))",
+          "train_mae": 0.5882352941176471,
+          "validation_mae": 1.0,
+          "test_mae": 1.0,
+          "proposals": 3000,
+          "unique_evaluations": 1481,
+          "cache_hits": 1519,
+          "elapsed_seconds": 0.6604443119995267,
+          "size": 10,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "cubic_2x3_mx2_1",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "((((-1 + (x * x)) + (((-1 * ((-x) * x)) - -2) - x)) * x) - (-1 + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1946,
+          "unique_evaluations": 1683,
+          "cache_hits": 273,
+          "elapsed_seconds": 0.5383846019994962,
+          "size": 22,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(((x * x) * x) + (-4 - (-5 + ((x * x) * (1 - x)))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 3000,
+          "unique_evaluations": 2461,
+          "cache_hits": 542,
+          "elapsed_seconds": 0.3938214119989425,
+          "size": 17,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "((((((x - (((1 - x) * x) * x)) + x) + (((-4 + (-64 - (-21 * x))) + x) - -36)) + x) - 18) - -51)",
+          "train_mae": 27.272727272727273,
+          "validation_mae": 240.0,
+          "test_mae": 1518.0,
+          "proposals": 3000,
+          "unique_evaluations": 1257,
+          "cache_hits": 1743,
+          "elapsed_seconds": 0.8152415139993536,
+          "size": 29,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "(((-2 + (52 - (-6 + x))) * x) - -3)",
+          "train_mae": 71.0909090909091,
+          "validation_mae": 435.0,
+          "test_mae": 2967.0,
+          "proposals": 3000,
+          "unique_evaluations": 1510,
+          "cache_hits": 1490,
+          "elapsed_seconds": 0.5599234090004757,
+          "size": 11,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "cubic_mx3_2x",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "(((-4 - (((-1 + x) * x) * x)) + x) - ((-2 + (((5 + (x * x)) + -5) - x)) - ((2 - x) + x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1767,
+          "unique_evaluations": 1493,
+          "cache_hits": 287,
+          "elapsed_seconds": 0.4962311620001856,
+          "size": 29,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(-5 + ((((-9 + ((1 - x) * x)) * x) + (4 * x)) - (6 - ((6 - x) * x))))",
+          "train_mae": 11.0,
+          "validation_mae": 11.0,
+          "test_mae": 12.5,
+          "proposals": 3000,
+          "unique_evaluations": 2416,
+          "cache_hits": 586,
+          "elapsed_seconds": 0.5557523539991962,
+          "size": 23,
+          "stopped_reason": "evaluation_limit"
+        },
+        "simulated_annealing": {
+          "program": "((-3 + (5 * x)) + (((-17 + x) + (8 + (15 * (-2 * (x - 1))))) - 18))",
+          "train_mae": 30.0,
+          "validation_mae": 232.5,
+          "test_mae": 1506.5,
+          "proposals": 3000,
+          "unique_evaluations": 1525,
+          "cache_hits": 1475,
+          "elapsed_seconds": 0.8595119990004605,
+          "size": 21,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "(((x * x) * (0 - x)) - 4)",
+          "train_mae": 6.181818181818182,
+          "validation_mae": 15.0,
+          "test_mae": 23.0,
+          "proposals": 3000,
+          "unique_evaluations": 1515,
+          "cache_hits": 1485,
+          "elapsed_seconds": 0.5478038919991377,
+          "size": 9,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "cubic_x3_m2x_4",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "((((x * x) * x) - ((x + x) - x)) - (((-4 + x) - -24) - 24))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 819,
+          "unique_evaluations": 704,
+          "cache_hits": 122,
+          "elapsed_seconds": 0.14950373099964054,
+          "size": 19,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(((((((-5 + ((x - 1) * x)) + x) + (7 + x)) + (6 - (8 + x))) * x) - -4) - x)",
+          "train_mae": 2.727272727272727,
+          "validation_mae": 7.5,
+          "test_mae": 11.5,
+          "proposals": 3000,
+          "unique_evaluations": 2457,
+          "cache_hits": 545,
+          "elapsed_seconds": 0.4252403520004009,
+          "size": 25,
+          "stopped_reason": "evaluation_limit"
+        },
+        "simulated_annealing": {
+          "program": "((((-5 + (7 * x)) + (((6 * x) - -21) - (-2 * (-2 * x)))) + (14 * x)) - 12)",
+          "train_mae": 27.272727272727273,
+          "validation_mae": 240.0,
+          "test_mae": 1518.0,
+          "proposals": 3000,
+          "unique_evaluations": 1480,
+          "cache_hits": 1520,
+          "elapsed_seconds": 0.8357173539989162,
+          "size": 23,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "(((1 + (x * x)) * x) + x)",
+          "train_mae": 11.272727272727273,
+          "validation_mae": 30.0,
+          "test_mae": 46.0,
+          "proposals": 3000,
+          "unique_evaluations": 1451,
+          "cache_hits": 1549,
+          "elapsed_seconds": 0.5486217870002292,
+          "size": 9,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "cubic_x3_m3x2_2",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "((((-7 + ((((x - 1) + x) + -1) - -3)) + x) * (-1 * x)) - (-3 + ((6 - (x * x)) * x)))",
+          "train_mae": 1.0,
+          "validation_mae": 1.0,
+          "test_mae": 1.0,
+          "proposals": 3000,
+          "unique_evaluations": 2438,
+          "cache_hits": 574,
+          "elapsed_seconds": 0.9385272590006934,
+          "size": 27,
+          "stopped_reason": "evaluation_limit"
+        },
+        "beam_mutation": {
+          "program": "(((x - 3) * x) * x)",
+          "train_mae": 2.0,
+          "validation_mae": 2.0,
+          "test_mae": 2.0,
+          "proposals": 3000,
+          "unique_evaluations": 2478,
+          "cache_hits": 525,
+          "elapsed_seconds": 0.3797885049989418,
+          "size": 7,
+          "stopped_reason": "evaluation_limit"
+        },
+        "simulated_annealing": {
+          "program": "(1 - ((8 + ((-1 - (-11 + x)) - (((-12 - (3 * x)) * x) + (12 - (-6 * (6 * x)))))) + -7))",
+          "train_mae": 27.272727272727273,
+          "validation_mae": 240.0,
+          "test_mae": 1518.0,
+          "proposals": 3000,
+          "unique_evaluations": 1203,
+          "cache_hits": 1797,
+          "elapsed_seconds": 0.781502576001003,
+          "size": 27,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "(-3 * ((-15 + x) * x))",
+          "train_mae": 82.0,
+          "validation_mae": 90.0,
+          "test_mae": 1288.0,
+          "proposals": 3000,
+          "unique_evaluations": 1531,
+          "cache_hits": 1469,
+          "elapsed_seconds": 0.5628149019994453,
+          "size": 7,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "cubic_x3_x",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "(((x * x) * x) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1318,
+          "unique_evaluations": 1084,
+          "cache_hits": 244,
+          "elapsed_seconds": 0.3560706799999025,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "((1 + (x * x)) * x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2983,
+          "unique_evaluations": 2487,
+          "cache_hits": 501,
+          "elapsed_seconds": 0.34127019500010647,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "((4 - ((((-2 + (x - (x - 5))) + (6 + x)) + (-32 + (-2 * x))) + x)) * x)",
+          "train_mae": 30.0,
+          "validation_mae": 232.5,
+          "test_mae": 1506.5,
+          "proposals": 3000,
+          "unique_evaluations": 1490,
+          "cache_hits": 1510,
+          "elapsed_seconds": 0.8865003950013488,
+          "size": 23,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "((x * x) * x)",
+          "train_mae": 2.727272727272727,
+          "validation_mae": 7.5,
+          "test_mae": 11.5,
+          "proposals": 3000,
+          "unique_evaluations": 1522,
+          "cache_hits": 1478,
+          "elapsed_seconds": 0.5371833640001569,
+          "size": 5,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "lin_2x_p1",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "(8 + (-(((-1 + (0 - (x - -1))) + 9) - x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 308,
+          "unique_evaluations": 257,
+          "cache_hits": 61,
+          "elapsed_seconds": 0.06361563500104239,
+          "size": 14,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(((-3 + x) + x) + 4)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 600,
+          "unique_evaluations": 428,
+          "cache_hits": 176,
+          "elapsed_seconds": 0.0577490689993283,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "(((3 + (4 * x)) + x) + (2 - ((((-4 + x) + x) - -8) + x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 32,
+          "unique_evaluations": 30,
+          "cache_hits": 2,
+          "elapsed_seconds": 0.004897174001598614,
+          "size": 19,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "(2 * x)",
+          "train_mae": 1.0,
+          "validation_mae": 1.0,
+          "test_mae": 1.0,
+          "proposals": 3000,
+          "unique_evaluations": 1487,
+          "cache_hits": 1513,
+          "elapsed_seconds": 0.5654512220007746,
+          "size": 3,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "lin_5x_m2",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "(((x - -1) + (x - (((-3 + x) * -1) - x))) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 255,
+          "unique_evaluations": 223,
+          "cache_hits": 42,
+          "elapsed_seconds": 0.034386175000690855,
+          "size": 15,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "((-3 - (-5 * x)) - -1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1247,
+          "unique_evaluations": 923,
+          "cache_hits": 329,
+          "elapsed_seconds": 0.10850071899949398,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "(((-3 + x) + (3 * x)) + ((2 + x) - 1))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 29,
+          "unique_evaluations": 27,
+          "cache_hits": 2,
+          "elapsed_seconds": 0.0031351659999927506,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "(5 * x)",
+          "train_mae": 2.0,
+          "validation_mae": 2.0,
+          "test_mae": 2.0,
+          "proposals": 3000,
+          "unique_evaluations": 1497,
+          "cache_hits": 1503,
+          "elapsed_seconds": 0.5611722789999476,
+          "size": 3,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "lin_m2x_m5",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "((-1 + (-2 * x)) - 4)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 254,
+          "unique_evaluations": 222,
+          "cache_hits": 43,
+          "elapsed_seconds": 0.03525784900011786,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(-5 - (x + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1247,
+          "unique_evaluations": 910,
+          "cache_hits": 342,
+          "elapsed_seconds": 0.1190301480000926,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "(4 + (-(((-3 - ((x - 3) - 4)) + ((5 * x) - (x - 1))) - ((1 + x) + -5))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 279,
+          "unique_evaluations": 169,
+          "cache_hits": 110,
+          "elapsed_seconds": 0.06547664000026998,
+          "size": 24,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "(-7 - ((-8 + ((2 + x) * 2)) - -2))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1874,
+          "unique_evaluations": 979,
+          "cache_hits": 895,
+          "elapsed_seconds": 0.3581233089989837,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "lin_m3x_p4",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "((8 + ((-4 * x) - (-x))) - 4)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 466,
+          "unique_evaluations": 380,
+          "cache_hits": 97,
+          "elapsed_seconds": 0.0805590249983652,
+          "size": 10,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(-((-3 * (0 - x)) - 4))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 575,
+          "unique_evaluations": 403,
+          "cache_hits": 177,
+          "elapsed_seconds": 0.059005334000175935,
+          "size": 8,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "(-1 + (((-2 * x) - -6) - ((5 + x) + -4)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 101,
+          "unique_evaluations": 80,
+          "cache_hits": 21,
+          "elapsed_seconds": 0.01930619800077693,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "(-((((-2 + x) + (1 + x)) + x) + -2))",
+          "train_mae": 1.0,
+          "validation_mae": 1.0,
+          "test_mae": 1.0,
+          "proposals": 3000,
+          "unique_evaluations": 1499,
+          "cache_hits": 1501,
+          "elapsed_seconds": 0.5593945000000531,
+          "size": 12,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "lin_x_m7",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "((((-3 + x) + -10) + 7) + -1)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 511,
+          "unique_evaluations": 415,
+          "cache_hits": 113,
+          "elapsed_seconds": 0.06612019100066391,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "((-3 + x) + -4)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 475,
+          "unique_evaluations": 343,
+          "cache_hits": 141,
+          "elapsed_seconds": 0.041341430998727446,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "(((-2 + x) + 6) + -11)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 193,
+          "unique_evaluations": 150,
+          "cache_hits": 43,
+          "elapsed_seconds": 0.029953932000353234,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "(x - 7)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 134,
+          "unique_evaluations": 95,
+          "cache_hits": 39,
+          "elapsed_seconds": 0.026482728999326355,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "max_two_lines",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "max(((x + x) + 1), (2 - min((x - 1), x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1209,
+          "unique_evaluations": 990,
+          "cache_hits": 230,
+          "elapsed_seconds": 0.3732544600006804,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(max(3, max((-(1 + x)), x)) + max(4, max(-8, x)))",
+          "train_mae": 1.2352941176470589,
+          "validation_mae": 0.5,
+          "test_mae": 0.5,
+          "proposals": 3000,
+          "unique_evaluations": 2359,
+          "cache_hits": 644,
+          "elapsed_seconds": 0.399848685001416,
+          "size": 14,
+          "stopped_reason": "evaluation_limit"
+        },
+        "simulated_annealing": {
+          "program": "max(-16, max(max(((x - -1) + x), -7), (4 - (1 + min((-min((7 + (-x)), -5)), x)))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2213,
+          "unique_evaluations": 1229,
+          "cache_hits": 984,
+          "elapsed_seconds": 0.5776078259987116,
+          "size": 23,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "(-min(-8, (x - (3 * max(1, x)))))",
+          "train_mae": 1.7058823529411764,
+          "validation_mae": 0.5,
+          "test_mae": 0.5,
+          "proposals": 3000,
+          "unique_evaluations": 1500,
+          "cache_hits": 1500,
+          "elapsed_seconds": 0.6795724219991826,
+          "size": 10,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "max_x_0",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "max(0, x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 91,
+          "unique_evaluations": 79,
+          "cache_hits": 31,
+          "elapsed_seconds": 0.020940684000379406,
+          "size": 3,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "max(-2, max(0, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 475,
+          "unique_evaluations": 319,
+          "cache_hits": 165,
+          "elapsed_seconds": 0.0428381490000902,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "max(-6, min(((-2 + max(0, x)) + 2), (-min(-2, (((-x) - 8) - 1)))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 494,
+          "unique_evaluations": 272,
+          "cache_hits": 222,
+          "elapsed_seconds": 0.12238340400108427,
+          "size": 19,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "max(-10, max(0, x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 147,
+          "unique_evaluations": 98,
+          "cache_hits": 49,
+          "elapsed_seconds": 0.04057749099956709,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        }
+      }
+    },
+    {
+      "task": "maxmin_gap",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "(1 - min(min(((1 + min((1 + x), x)) + -2), (-3 - (-2 + max(0, x)))), min(-3, x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1380,
+          "unique_evaluations": 1070,
+          "cache_hits": 324,
+          "elapsed_seconds": 0.4424054420014727,
+          "size": 23,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "max((2 + x), (2 - min(8, min(-2, x))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1272,
+          "unique_evaluations": 941,
+          "cache_hits": 335,
+          "elapsed_seconds": 0.14965724399917235,
+          "size": 11,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "max(-7, max(-8, max((2 + max(max((-x), (-1 - x)), (x - 1))), 6)))",
+          "train_mae": 0.9411764705882353,
+          "validation_mae": 0.5,
+          "test_mae": 0.5,
+          "proposals": 3000,
+          "unique_evaluations": 1595,
+          "cache_hits": 1405,
+          "elapsed_seconds": 0.8716245439991326,
+          "size": 18,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "max(-5, max(-1, max((-(-2 + x)), x)))",
+          "train_mae": 1.1764705882352942,
+          "validation_mae": 1.0,
+          "test_mae": 1.0,
+          "proposals": 3000,
+          "unique_evaluations": 1438,
+          "cache_hits": 1562,
+          "elapsed_seconds": 0.6402474610003992,
+          "size": 10,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "quad_2x2_m3x_2",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "(((-4 + ((-x) * (-2 - ((-7 + x) + x)))) + (4 + x)) + (2 + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 768,
+          "unique_evaluations": 664,
+          "cache_hits": 117,
+          "elapsed_seconds": 0.17273352299889666,
+          "size": 20,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(-((-x) + (((x + x) * (2 - x)) - 2)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2591,
+          "unique_evaluations": 2139,
+          "cache_hits": 457,
+          "elapsed_seconds": 0.2984943649989873,
+          "size": 13,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "((((x - 2) * x) + (((((x - -8) * x) - (8 * x)) - (3 + x)) - -9)) + -4)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 431,
+          "unique_evaluations": 272,
+          "cache_hits": 159,
+          "elapsed_seconds": 0.08865221300038684,
+          "size": 23,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "((-5 - (-2 * x)) * x)",
+          "train_mae": 6.615384615384615,
+          "validation_mae": 18.0,
+          "test_mae": 33.0,
+          "proposals": 3000,
+          "unique_evaluations": 1520,
+          "cache_hits": 1480,
+          "elapsed_seconds": 0.5417796710007678,
+          "size": 7,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "quad_3x2_2x_1",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "((((-(x - (3 + x))) * x) * x) - (8 - (((8 + x) - -1) + x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1644,
+          "unique_evaluations": 1420,
+          "cache_hits": 234,
+          "elapsed_seconds": 0.3622972720004327,
+          "size": 20,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(((2 - (-2 * x)) + x) * x)",
+          "train_mae": 1.0,
+          "validation_mae": 1.0,
+          "test_mae": 1.0,
+          "proposals": 3000,
+          "unique_evaluations": 2492,
+          "cache_hits": 513,
+          "elapsed_seconds": 0.3488579700006085,
+          "size": 9,
+          "stopped_reason": "evaluation_limit"
+        },
+        "simulated_annealing": {
+          "program": "(((((((7 + (2 * x)) - 4) + x) * x) + (-16 - ((-19 - x) + x))) + -5) - (-3 + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 334,
+          "unique_evaluations": 180,
+          "cache_hits": 154,
+          "elapsed_seconds": 0.08890838900151721,
+          "size": 25,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "((12 + (((4 * x) - x) * x)) + 5)",
+          "train_mae": 16.0,
+          "validation_mae": 18.0,
+          "test_mae": 33.0,
+          "proposals": 3000,
+          "unique_evaluations": 1501,
+          "cache_hits": 1499,
+          "elapsed_seconds": 0.5531347420001111,
+          "size": 11,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "quad_mx2_4x_3",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "(-3 + ((x - (((-4 + x) + -2) + (-5 * x))) - ((x * x) + x)))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1107,
+          "unique_evaluations": 906,
+          "cache_hits": 211,
+          "elapsed_seconds": 0.27130051299900515,
+          "size": 19,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(3 - ((-4 + x) * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1944,
+          "unique_evaluations": 1585,
+          "cache_hits": 363,
+          "elapsed_seconds": 0.21369706199948268,
+          "size": 7,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "(((((4 + x) * 4) - (3 + x)) - ((x * x) - (3 * (x - (5 + x))))) + (x - -5))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 874,
+          "unique_evaluations": 718,
+          "cache_hits": 156,
+          "elapsed_seconds": 0.14265624300060153,
+          "size": 25,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "(((6 - (x - -8)) - -6) * x)",
+          "train_mae": 3.0,
+          "validation_mae": 3.0,
+          "test_mae": 3.0,
+          "proposals": 3000,
+          "unique_evaluations": 1499,
+          "cache_hits": 1501,
+          "elapsed_seconds": 0.5585499690005236,
+          "size": 9,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "quad_x2_m4",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "(((x * x) - (7 - (4 + (-(1 + x))))) + x)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 512,
+          "unique_evaluations": 444,
+          "cache_hits": 76,
+          "elapsed_seconds": 0.0818681340006151,
+          "size": 14,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(-4 + (x * x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2666,
+          "unique_evaluations": 1874,
+          "cache_hits": 794,
+          "elapsed_seconds": 0.21727476800151635,
+          "size": 5,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "(((-8 + ((19 + ((x - 1) * x)) - 5)) + -4) - (((-5 + (8 - x)) * 2) + x))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 675,
+          "unique_evaluations": 463,
+          "cache_hits": 212,
+          "elapsed_seconds": 0.14001768699927197,
+          "size": 23,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "(x * x)",
+          "train_mae": 4.0,
+          "validation_mae": 4.0,
+          "test_mae": 4.0,
+          "proposals": 3000,
+          "unique_evaluations": 1463,
+          "cache_hits": 1537,
+          "elapsed_seconds": 0.5578636410009494,
+          "size": 3,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "quad_x2_x_1",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "(((2 + x) + ((-1 + x) * (4 + x))) - (0 - (3 - ((x + x) + x))))",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 966,
+          "unique_evaluations": 849,
+          "cache_hits": 131,
+          "elapsed_seconds": 0.17900562999966496,
+          "size": 21,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "(((5 + x) + (x * x)) + -4)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 1944,
+          "unique_evaluations": 1496,
+          "cache_hits": 452,
+          "elapsed_seconds": 0.20325642300122126,
+          "size": 9,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "simulated_annealing": {
+          "program": "((((-2 + ((-(((x - 5) - 8) + x)) - -5)) + ((-8 - x) * (5 - x))) + -7) - -32)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 258,
+          "unique_evaluations": 154,
+          "cache_hits": 104,
+          "elapsed_seconds": 0.05057591400145611,
+          "size": 24,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "random_program": {
+          "program": "(x * x)",
+          "train_mae": 3.3076923076923075,
+          "validation_mae": 9.0,
+          "test_mae": 16.5,
+          "proposals": 3000,
+          "unique_evaluations": 1545,
+          "cache_hits": 1455,
+          "elapsed_seconds": 0.5613179989995842,
+          "size": 3,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "quartic_2x4_mx2_3",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "((((-15 - ((-8 * (x - (-5 * x))) - (-13 + (((x * x) * x) - -14)))) - (12 * x)) + x) * x)",
+          "train_mae": 172.33333333333334,
+          "validation_mae": 313.0,
+          "test_mae": 18821.3,
+          "proposals": 3000,
+          "unique_evaluations": 2069,
+          "cache_hits": 942,
+          "elapsed_seconds": 0.9798261639989505,
+          "size": 27,
+          "stopped_reason": "evaluation_limit"
+        },
+        "beam_mutation": {
+          "program": "((-5 * ((-16 * x) * x)) + ((-8 - (340 + x)) - (x - (-x))))",
+          "train_mae": 256.77777777777777,
+          "validation_mae": 605.5,
+          "test_mae": 37285.1,
+          "proposals": 3000,
+          "unique_evaluations": 2475,
+          "cache_hits": 530,
+          "elapsed_seconds": 0.5089428390001558,
+          "size": 18,
+          "stopped_reason": "evaluation_limit"
+        },
+        "simulated_annealing": {
+          "program": "(-160 + ((((9 * (((7 * x) * x) - 7)) + (((11 * x) * x) - (((-6 * x) * x) - 10))) + -23) - 54))",
+          "train_mae": 250.33333333333334,
+          "validation_mae": 578.5,
+          "test_mae": 37227.1,
+          "proposals": 3000,
+          "unique_evaluations": 1060,
+          "cache_hits": 1940,
+          "elapsed_seconds": 0.9167198949999147,
+          "size": 29,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "(-4 - (4 * (-7 - ((16 * x) * x))))",
+          "train_mae": 297.0,
+          "validation_mae": 913.5,
+          "test_mae": 39161.1,
+          "proposals": 3000,
+          "unique_evaluations": 1521,
+          "cache_hits": 1479,
+          "elapsed_seconds": 0.536058982999748,
+          "size": 11,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "quartic_square",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "((((((((3 + x) + -7) + (x * x)) - x) * x) * x) + (-3 - (((2 + (-1 * x)) + 3) + x))) - -12)",
+          "train_mae": 0.0,
+          "validation_mae": 0.0,
+          "test_mae": 0.0,
+          "proposals": 2638,
+          "unique_evaluations": 1945,
+          "cache_hits": 705,
+          "elapsed_seconds": 0.8910655239997141,
+          "size": 29,
+          "stopped_reason": "exact_train_and_validation"
+        },
+        "beam_mutation": {
+          "program": "((-8 + ((((x - 3) * x) + x) * ((((-3 + ((2 + x) * x)) + 3) - x) - (-2 * x)))) - 12)",
+          "train_mae": 39.111111111111114,
+          "validation_mae": 279.5,
+          "test_mae": 1805.5,
+          "proposals": 3000,
+          "unique_evaluations": 2166,
+          "cache_hits": 839,
+          "elapsed_seconds": 0.558259937000912,
+          "size": 27,
+          "stopped_reason": "evaluation_limit"
+        },
+        "simulated_annealing": {
+          "program": "((((x + x) * (((((2 + x) + 8) - x) - -8) * x)) - 1) - 139)",
+          "train_mae": 122.66666666666667,
+          "validation_mae": 292.5,
+          "test_mae": 18681.3,
+          "proposals": 3000,
+          "unique_evaluations": 1584,
+          "cache_hits": 1416,
+          "elapsed_seconds": 0.7374863749992073,
+          "size": 19,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "(-(4 * ((-8 * x) * x)))",
+          "train_mae": 158.22222222222223,
+          "validation_mae": 322.5,
+          "test_mae": 19103.3,
+          "proposals": 3000,
+          "unique_evaluations": 1515,
+          "cache_hits": 1485,
+          "elapsed_seconds": 0.5581049540014646,
+          "size": 8,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    },
+    {
+      "task": "quartic_x4_x2_1",
+      "seed": 1,
+      "methods": {
+        "standard_gp": {
+          "program": "(-16 + (((((-11 * x) + x) + (-((3 * (x - (16 * x))) - (x + x)))) * x) - (7 + x)))",
+          "train_mae": 142.66666666666666,
+          "validation_mae": 342.5,
+          "test_mae": 19123.3,
+          "proposals": 3000,
+          "unique_evaluations": 2098,
+          "cache_hits": 915,
+          "elapsed_seconds": 1.1518923989988252,
+          "size": 26,
+          "stopped_reason": "evaluation_limit"
+        },
+        "beam_mutation": {
+          "program": "(((((4 + (x * x)) - 4) * x) + x) * x)",
+          "train_mae": 1.0,
+          "validation_mae": 1.0,
+          "test_mae": 1.0,
+          "proposals": 3000,
+          "unique_evaluations": 2036,
+          "cache_hits": 970,
+          "elapsed_seconds": 0.5597736299987446,
+          "size": 13,
+          "stopped_reason": "evaluation_limit"
+        },
+        "simulated_annealing": {
+          "program": "(-13 + ((-136 + ((((x - (7 * x)) + x) * -8) * x)) - (x - (-1 - (-9 - (((3 + x) * x) - x))))))",
+          "train_mae": 123.33333333333333,
+          "validation_mae": 294.5,
+          "test_mae": 18679.3,
+          "proposals": 3000,
+          "unique_evaluations": 1301,
+          "cache_hits": 1699,
+          "elapsed_seconds": 0.8376558969994221,
+          "size": 29,
+          "stopped_reason": "evaluation_limit"
+        },
+        "random_program": {
+          "program": "(-(((-1 * x) * (x * x)) * x))",
+          "train_mae": 7.666666666666667,
+          "validation_mae": 43.5,
+          "test_mae": 141.5,
+          "proposals": 3000,
+          "unique_evaluations": 1465,
+          "cache_hits": 1535,
+          "elapsed_seconds": 0.5662347210000007,
+          "size": 10,
+          "stopped_reason": "evaluation_limit"
+        }
+      }
+    }
+  ]
+}
