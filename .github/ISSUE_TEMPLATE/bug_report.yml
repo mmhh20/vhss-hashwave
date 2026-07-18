@@ -1,0 +1,29 @@
+name: Bug report
+description: Report reproducible incorrect behavior
+title: "[Bug]: "
+labels: [bug]
+
+body:
+  - type: textarea
+    attributes:
+      label: Description
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Reproduction command and input
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Expected and observed behavior
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: VHSS version, Python version, and operating system
+    validations:
+      required: true
