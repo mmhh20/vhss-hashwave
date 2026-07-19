@@ -44,10 +44,10 @@ def main() -> None:
 
     args = parser.parse_args()
     if args.command == "memory-demo":
-        print(json.dumps(demo_classifier(), ensure_ascii=False, indent=2))
+        print(json.dumps(demo_classifier(), ensure_ascii=True, indent=2))
         return
     if args.command == "verify-share":
-        print(json.dumps(verify_json_line(args.line), ensure_ascii=False, indent=2))
+        print(json.dumps(verify_json_line(args.line), ensure_ascii=True, indent=2))
         return
 
     task = Task.polynomial_demo()
@@ -70,9 +70,9 @@ def main() -> None:
         payload["random_program"] = _result_payload(random_result)
 
     if getattr(args, "json", False):
-        print(json.dumps(payload, ensure_ascii=False, indent=2))
+        print(json.dumps(payload, ensure_ascii=True, indent=2))
     else:
-        print(json.dumps(payload, ensure_ascii=False, indent=2))
+        print(json.dumps(payload, ensure_ascii=True, indent=2))
 
 
 if __name__ == "__main__":
