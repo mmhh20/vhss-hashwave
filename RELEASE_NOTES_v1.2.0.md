@@ -22,7 +22,23 @@ statistically established search advantage over conventional PRNG seeding.
 No physical SHA-256 ASIC, Stratum server, or energy meter was used. Hardware
 performance and energy efficiency remain future validation requirements.
 
-## Release asset
+## Archival identifiers
 
-Attach `vhss_hashwave-1.2.0-py3-none-any.whl` to the GitHub Release rather than
-committing it to the source tree.
+- Version DOI: https://doi.org/10.5281/zenodo.21435911
+- Project concept DOI: https://doi.org/10.5281/zenodo.21435910
+
+## Documentation correction — 2026-07-19
+
+The README originally displayed the mutation-seed domain-separation tag as
+`VHSS/mutation/v1`. The version 1.2.0 implementation in `hashwave/search.py`
+uses `HashWave/mutation/v3`, with nonce and generation serialized as unsigned
+32-bit little-endian integers. This is a documentation-only correction. No
+algorithmic code, datasets, tests, figures, package version, or reported
+numerical results changed.
+
+## Release assets
+
+GitHub automatically provides source-code archives for the release. A wheel
+named `vhss_hashwave-1.2.0-py3-none-any.whl` may be attached as an optional
+installation convenience; it is not required for exact reproduction and must
+not be committed to the source tree.
