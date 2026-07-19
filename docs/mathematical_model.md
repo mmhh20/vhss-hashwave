@@ -21,8 +21,7 @@ mutation choices from `d`. It derives
 u = SHA256(domain || d || nonce || H(p_t) || root(task) || generation),
 ```
 
-where `domain` is a fixed protocol tag. The next program is
-
+where `domain` is the fixed ASCII protocol tag `HashWave/mutation/v3` in VHSS/HashWave version 1.2.0.
 ```text
 p_(t+1) = Delta(p_t, u),
 ```
