@@ -9,7 +9,7 @@ description = "Verifiable hash-seeded symbolic search research software"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {file = "LICENSE"}
-authors = [{name = "VHSS Project Contributors"}]
+authors = [{name = "Mehdi Moradi"}]
 keywords = ["symbolic regression", "genetic programming", "proof of work", "SHA-256", "reproducible research"]
 classifiers = [
   "Development Status :: 4 - Beta",
