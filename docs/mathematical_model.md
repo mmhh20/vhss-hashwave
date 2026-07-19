@@ -15,13 +15,26 @@ int_le(d) <= T.
 ```
 
 Because accepted hashes are conditioned by `T`, VHSS does not directly decode
-mutation choices from `d`. It derives
+mutation choices from `d`. Version 1.2.0 derives
 
 ```text
-u = SHA256(domain || d || nonce || H(p_t) || root(task) || generation),
+u = SHA256(
+    ASCII("HashWave/mutation/v3")
+    || d
+    || LE32(nonce)
+    || H(p_t)
+    || root(task)
+    || LE32(generation)
+),
 ```
 
-where `domain` is the fixed ASCII protocol tag `HashWave/mutation/v3` in VHSS/HashWave version 1.2.0.
+where `ASCII("HashWave/mutation/v3")` is the exact domain-separation tag,
+`LE32` is unsigned 32-bit little-endian serialization, and `d`, `H(p_t)`, and
+`root(task)` are 32-byte values. The implementation rejects non-32-byte digest
+or state-hash inputs and nonce or generation values outside the unsigned
+32-bit range. The derived value `u` is not subject to the original target
+predicate. The next program is
+
 ```text
 p_(t+1) = Delta(p_t, u),
 ```
