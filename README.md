@@ -64,11 +64,16 @@ For a verified work digest `d`, nonce `n`, parent state hash `h_p`, task state
 root `r`, and generation `g`, VHSS derives a mutation seed
 
 ```text
-u = SHA256("VHSS/mutation/v3" || d || n || h_p || r || g)
+u = SHA256(ASCII("HashWave/mutation/v3") || d || LE32(n) || h_p || r || LE32(g))
 ```
-The exact ASCII domain-separation tag used by VHSS/HashWave version 1.2.0 is HashWave/mutation/v3.
 
-and applies a bounded deterministic transformation
+The exact ASCII domain-separation tag used by VHSS/HashWave version 1.2.0 is
+`HashWave/mutation/v3`. `LE32` denotes unsigned 32-bit little-endian
+serialization. The archived version 1.2.0 implementation uses this byte
+layout. This documentation correction changes no source-code logic,
+data, tests, figures, or numerical results.
+
+VHSS then applies a bounded deterministic transformation
 
 ```text
 p_(t+1) = Delta(p_t, u).
