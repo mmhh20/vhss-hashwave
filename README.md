@@ -100,7 +100,7 @@ for future validation are specified in
 
 ## Citation
 
-Use [CITATION.cff](CITATION.cff). The initial public repository uses a neutral project-contributor entry. Replace it with the verified scholarly author name and ORCID before creating the archival Zenodo release used in the journal submission.
+Use [CITATION.cff](CITATION.cff). The software author is **Mehdi Moradi**, Independent Researcher, Dorud, Lorestan, Iran ([ORCID 0009-0008-2010-2393](https://orcid.org/0009-0008-2010-2393)). The archival Zenodo DOI will be added after the first GitHub release is deposited.
 
 ## License
 
