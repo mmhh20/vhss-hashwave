@@ -64,8 +64,9 @@ For a verified work digest `d`, nonce `n`, parent state hash `h_p`, task state
 root `r`, and generation `g`, VHSS derives a mutation seed
 
 ```text
-u = SHA256("VHSS/mutation/v1" || d || n || h_p || r || g)
+u = SHA256("VHSS/mutation/v3" || d || n || h_p || r || g)
 ```
+The exact ASCII domain-separation tag used by VHSS/HashWave version 1.2.0 is HashWave/mutation/v3.
 
 and applies a bounded deterministic transformation
 
