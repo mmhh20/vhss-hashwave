@@ -1,13 +1,19 @@
-# Authors and contributors
+# Author
 
-The initial public repository is maintained under the GitHub account
-`mmhh20`. To avoid publishing invented scholarly metadata, the first
-repository version identifies the author collectively as **VHSS Project
-Contributors**.
+**Mehdi Moradi**  
+Independent Researcher  
+Dorud, Lorestan, Iran  
+ORCID: https://orcid.org/0009-0008-2010-2393  
+GitHub: https://github.com/mmhh20
 
-Before the archival Zenodo release and journal submission, replace this entry
-in `CITATION.cff` and `pyproject.toml` with the verified English author name,
-affiliation, email used for correspondence, and ORCID where available.
+Mehdi Moradi is the author and maintainer of the initial VHSS / HashWave
+research-software release and accepts responsibility for the software,
+experiments, results, and associated manuscript.
 
-Git commit authorship is separate from journal authorship. Journal authors must
-meet the journal's authorship and accountability requirements.
+The corresponding-author email is intentionally not published in this public
+repository. It is supplied directly to the journal submission system and in
+the manuscript title page as required by the journal.
+
+Git commit authorship is distinct from scholarly authorship. Future
+contributors should be credited according to their documented contributions
+and the applicable journal authorship criteria.
