@@ -10,6 +10,18 @@
 - Added an explicit protocol for future physical ASIC, Stratum, and energy validation.
 - Increased the automated test suite to 43 tests.
 
+### Documentation correction - 2026-07-19
+
+- Corrected the displayed mutation-seed domain tag in `README.md` from
+  `VHSS/mutation/v1` to the implementation value `HashWave/mutation/v3`.
+- Documented the exact ASCII domain tag and unsigned 32-bit little-endian
+  serialization used for nonce and generation.
+- Added the Zenodo version DOI to `CITATION.cff`.
+- Updated reproducibility documentation to identify the existing archived
+  version and concept DOI.
+- No source-code logic, datasets, tests, figures, package version, or reported
+  numerical results were changed.
+
 ## 1.1.0 - 2026-07-18
 
 - Prepared the project for open research-software review.
