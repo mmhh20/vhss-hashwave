@@ -1,5 +1,5 @@
 # VHSS / HashWave
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21435910.svg)](https://doi.org/10.5281/zenodo.21435910)
 [![Tests](https://github.com/mmhh20/vhss-hashwave/actions/workflows/tests.yml/badge.svg)](https://github.com/mmhh20/vhss-hashwave/actions/workflows/tests.yml)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-BSD--3--Clause-blue)](LICENSE)
@@ -100,7 +100,17 @@ for future validation are specified in
 
 ## Citation
 
-Use [CITATION.cff](CITATION.cff). The software author is **Mehdi Moradi**, Independent Researcher, Dorud, Lorestan, Iran ([ORCID 0009-0008-2010-2393](https://orcid.org/0009-0008-2010-2393)). The archival Zenodo DOI will be added after the first GitHub release is deposited.
+Use [CITATION.cff](CITATION.cff) to cite this software.
+
+**Mehdi Moradi**  
+Independent Researcher, Dorud, Lorestan, Iran  
+ORCID: [0009-0008-2010-2393](https://orcid.org/0009-0008-2010-2393)
+
+Moradi, M. (2026). *VHSS: Verifiable Hash-Seeded Symbolic Search*  
+(Version 1.2.0). Zenodo.  
+https://doi.org/10.5281/zenodo.21435911
+
+Concept DOI: https://doi.org/10.5281/zenodo.21435910
 
 ## License
 
