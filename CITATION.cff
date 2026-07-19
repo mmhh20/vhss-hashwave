@@ -4,6 +4,7 @@ title: "VHSS: Verifiable Hash-Seeded Symbolic Search"
 type: software
 version: 1.2.0
 date-released: 2026-07-19
+doi: "10.5281/zenodo.21435911"
 license: BSD-3-Clause
 authors:
   - family-names: "Moradi"
