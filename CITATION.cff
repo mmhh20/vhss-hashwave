@@ -1,12 +1,15 @@
 cff-version: 1.2.0
-message: "If you use VHSS in research, please cite the software release and the associated article after publication."
+message: "If you use VHSS in research, please cite this software release and the associated article after publication."
 title: "VHSS: Verifiable Hash-Seeded Symbolic Search"
 type: software
 version: 1.2.0
-date-released: 2026-07-18
+date-released: 2026-07-19
 license: BSD-3-Clause
 authors:
-  - name: "VHSS Project Contributors"
+  - family-names: "Moradi"
+    given-names: "Mehdi"
+    orcid: "https://orcid.org/0009-0008-2010-2393"
+    affiliation: "Independent Researcher, Dorud, Lorestan, Iran"
 repository-code: "https://github.com/mmhh20/vhss-hashwave"
 url: "https://github.com/mmhh20/vhss-hashwave"
 keywords:
